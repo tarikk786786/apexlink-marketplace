@@ -1,13 +1,14 @@
 """
 ApexLink Studio — Unified 100% Free SEO & Backlink Power Tools Platform
-Engineered for direct generation, auditing, pinging, and analysis:
-1. 4,640+ Web Directory, Archive & Diagnostic Generator (Zero Cost)
-2. High-Throughput Concurrent Live Pinger & Crawler Broadcaster
-3. Google E-E-A-T Domain Authority & Toxic PBN Spam Auditor
-4. Contextual Penguin-Safe Anchor Text Diversity Matrix Generator
-5. Google Search Console Disavow File Builder (disavow.txt)
-6. High-Authority Media & Outreach Directory Explorer
-7. Cryptographic Owner & Code Integrity Lock (tarikk786786)
+Engineered for direct generation, auditing, live verification, pinging, and analysis:
+1. 4,640+ Web Directory, Archive & Diagnostic Generator (Tier 1 & 2 Quality Prioritized)
+2. Live Concurrent Link Health & Status Verifier (HTTP Status, Latency, DA Rating)
+3. High-Throughput Concurrent Live Pinger & Crawler Broadcaster
+4. Google E-E-A-T Domain Authority & Toxic PBN Spam Auditor
+5. Contextual Penguin-Safe Anchor Text Diversity Matrix Generator
+6. Google Search Console Disavow File Builder (disavow.txt)
+7. High-Authority Media & Outreach Directory Explorer
+8. Cryptographic Owner & Code Integrity Lock (tarikk786786)
 """
 
 import json
@@ -15,7 +16,7 @@ import os
 import sys
 import time
 import urllib.parse
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
 # Ensure UTF-8 output on Windows
@@ -39,6 +40,7 @@ from core.security import (
 from engine.tokenizer import normalize_url, extract_youtube_id, build_token_map, replace_tokens
 from engine.templates import repo as template_repo
 from engine.pinger import _sync_ping_urllib, AsyncPinger
+from engine.verification import verify_single_url, verify_urls_concurrently, get_link_authority_profile
 from vetting.auditor import audit_url, audit_batch
 from vetting.disavow import generate_disavow_content
 from contextual.anchors import generate_anchor_profile
@@ -345,6 +347,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
                 "security_status": "LOCKED_AUTHORIZED_OWNER_ONLY",
                 "available_tools": [
                     "4640+ Backlink URL Generator",
+                    "Live Concurrent Link Verifier",
                     "Multi-Threaded Live Pinger",
                     "Google E-E-A-T Domain Auditor",
                     "Penguin-Safe Anchor Diversity Matrix",
@@ -370,11 +373,12 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
-        # 1. Backlink Generator Tool (Free 4,640+ endpoints)
+        # 1. Backlink Generator Tool (Free 4,640+ endpoints, quality prioritized)
         if parsed.path == "/api/generate":
             target = payload.get("url", "https://example.com")
             cat = payload.get("category", "all")
             limit = int(payload.get("limit", 100))
+            do_verify = bool(payload.get("verify", False))
 
             norm = normalize_url(target)
             vid = extract_youtube_id(norm)
@@ -382,19 +386,60 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             templates = template_repo.get_templates(is_youtube=bool(vid), category=cat)
 
             urls = []
+            detailed = []
             seen = set()
+            max_needed = limit if limit > 0 else 500
             for t in templates:
                 u = replace_tokens(t["url"], token_map).strip()
                 if u and u.startswith(("http://", "https://")) and u not in seen:
                     seen.add(u)
                     urls.append(u)
-            if limit:
-                urls = urls[:limit]
+                    da, tier = get_link_authority_profile(u)
+                    detailed.append({
+                        "url": u,
+                        "category": t["category"],
+                        "domain_authority": da,
+                        "quality_tier": tier
+                    })
+                    if len(urls) >= max_needed:
+                        break
 
-            self._send_json({"target": norm, "urls": urls, "total": len(urls)})
+            # If live verification requested, run concurrent verification
+            if do_verify and urls:
+                verified_records = verify_urls_concurrently(urls[:50], concurrency=15)
+                self._send_json({
+                    "target": norm,
+                    "urls": urls,
+                    "detailed": detailed,
+                    "verified": verified_records,
+                    "total": len(urls)
+                })
+                return
+
+            self._send_json({"target": norm, "urls": urls, "detailed": detailed, "total": len(urls)})
             return
 
-        # 2. Live Concurrent Pinger (Multi-threaded HTTP pings)
+        # 2. Live Concurrent Link Verifier Tool (Direct bulk link verification)
+        elif parsed.path == "/api/verify":
+            raw_urls = payload.get("urls", [])
+            if not raw_urls and payload.get("url"):
+                raw_urls = [payload.get("url")]
+            concurrency = int(payload.get("concurrency", 15))
+            timeout = float(payload.get("timeout", 4.0))
+
+            clean_urls = [u.strip() for u in raw_urls if u.strip()]
+            verified = verify_urls_concurrently(clean_urls, concurrency=concurrency, timeout=timeout)
+            
+            valid_count = sum(1 for r in verified if r["is_valid"])
+            self._send_json({
+                "results": verified,
+                "total": len(verified),
+                "valid_count": valid_count,
+                "success_rate": round((valid_count / len(verified) * 100) if verified else 0, 1)
+            })
+            return
+
+        # 3. Live Concurrent Pinger (Multi-threaded HTTP pings)
         elif parsed.path == "/api/ping":
             target = payload.get("url", "https://example.com")
             cat = payload.get("category", "all")
@@ -415,22 +460,34 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             if limit:
                 targets = targets[:limit]
 
+            from concurrent.futures import ThreadPoolExecutor, as_completed
             results = []
-            for item in targets:
-                res = _sync_ping_urllib(item, timeout=3.5)
-                results.append(res.to_dict())
+            with ThreadPoolExecutor(max_workers=min(len(targets) or 1, 15)) as pool:
+                futures = {pool.submit(_sync_ping_urllib, item, 2.5): item for item in targets}
+                for f in as_completed(futures):
+                    try:
+                        res = f.result()
+                        results.append(res.to_dict())
+                    except Exception as err:
+                        results.append({
+                            "url": futures[f]["url"],
+                            "category": futures[f]["category"],
+                            "status": "ERR",
+                            "ok": False,
+                            "latency_ms": 0.0
+                        })
 
             self._send_json({"results": results, "total": len(results)})
             return
 
-        # 3. E-E-A-T Domain Vetting Tool
+        # 4. E-E-A-T Domain Vetting Tool
         elif parsed.path == "/api/vet":
             target = payload.get("target", "")
             res = audit_url(target)
             self._send_json(res.to_dict())
             return
 
-        # 4. Contextual Anchor Text Diversity Matrix Tool
+        # 5. Contextual Anchor Text Diversity Matrix Tool
         elif parsed.path == "/api/anchors":
             brand = payload.get("brand", "ApexBrand")
             url = payload.get("url", "https://example.com")
@@ -440,7 +497,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             self._send_json({"anchors": anchors})
             return
 
-        # 5. Google Disavow Generator Tool
+        # 6. Google Disavow Generator Tool
         elif parsed.path == "/api/disavow":
             items = payload.get("items", [])
             domain_mode = payload.get("domain_mode", True)
@@ -448,7 +505,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             self._send_json({"content": content})
             return
 
-        # 6. Owner Verification
+        # 7. Owner Verification
         elif parsed.path == "/api/owner/verify":
             candidate = payload.get("owner_id", "")
             authorized = verify_owner_access(candidate)
@@ -466,7 +523,8 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
 
 
 def start_server(host: str = "127.0.0.1", port: int = 8700):
-    server = HTTPServer((host, port), UnifiedApexHandler)
+    server = ThreadingHTTPServer((host, port), UnifiedApexHandler)
+    server.daemon_threads = True
     print(f"[*] ApexLink 100% Free SEO Studio Running at http://{host}:{port}")
     try:
         server.serve_forever()
