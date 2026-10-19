@@ -1,7 +1,12 @@
 """
-ApexLink Studio - Enterprise SEO Marketplace & Automation Server
-High-concurrency, security-guarded backend for link building, guest post marketplace,
-real-time indexing pings, and owner-protected administrative control.
+ApexLink Studio — Unified Enterprise SEO & Link Building Suite
+Integrates:
+1. Vefogix-style 140,000+ Guest Post Marketplace with real-time Ahrefs/Semrush metrics
+2. High-throughput 4,600+ Directory, Archive & Web Diagnostic Generator & Pinger
+3. E-E-A-T & Toxic PBN Domain Auditor
+4. Contextual Penguin-Safe Anchor Text Diversity Matrix
+5. Google Search Console Disavow Generator
+6. Cryptographic Owner & Modification Lock (tarikk786786)
 """
 
 import json
@@ -20,6 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent
 PUBLIC_DIR = BASE_DIR / "public"
 
 sys.path.insert(0, str(BASE_DIR))
+
+# Core Security & Verification
 from core.security import (
     verify_owner_access,
     compute_payload_hmac,
@@ -27,7 +34,15 @@ from core.security import (
     AUTHORIZED_OWNER_ID
 )
 
-# Verified High-Authority Publishers Database with Real Metrics
+# Integrated Automation Engines
+from engine.tokenizer import normalize_url, extract_youtube_id, build_token_map, replace_tokens
+from engine.templates import repo as template_repo
+from engine.pinger import _sync_ping_urllib, AsyncPinger
+from vetting.auditor import audit_url, audit_batch
+from vetting.disavow import generate_disavow_content
+from contextual.anchors import generate_anchor_profile
+
+# Verified High-Authority Publications Database
 PUBLISHERS_DB = [
     {
         "id": "apx-1",
@@ -322,12 +337,11 @@ PUBLISHERS_DB = [
 ORDERS_LEDGER = []
 
 
-class ApexLinkHandler(SimpleHTTPRequestHandler):
+class UnifiedApexHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(PUBLIC_DIR), **kwargs)
 
     def log_message(self, format, *args):
-        # Silence routine request terminal noise
         pass
 
     def do_GET(self):
@@ -374,6 +388,7 @@ class ApexLinkHandler(SimpleHTTPRequestHandler):
                 "registered_websites": "142,500+",
                 "publishers_writers": "48,200+",
                 "tasks_completed": "310,000+",
+                "indexing_templates": template_repo.total_count,
                 "guarantee_uptime": "99.98%",
                 "owner_identity": AUTHORIZED_OWNER_ID,
                 "security_status": "LOCKED_AUTHORIZED_OWNER_ONLY"
@@ -388,7 +403,7 @@ class ApexLinkHandler(SimpleHTTPRequestHandler):
             self._send_json({"orders": ORDERS_LEDGER, "total": len(ORDERS_LEDGER)})
             return
 
-        # Serve static files (HTML, JS, CSS, images)
+        # Default static file serving (HTML, JS, CSS, robots.txt, sitemap.xml)
         return super().do_GET()
 
     def do_POST(self):
@@ -400,7 +415,85 @@ class ApexLinkHandler(SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
-        if parsed.path == "/api/cart/checkout":
+        # 1. Backlink Generator Endpoint (from backlink-generator-tool)
+        if parsed.path == "/api/generate":
+            target = payload.get("url", "https://example.com")
+            cat = payload.get("category", "all")
+            limit = int(payload.get("limit", 100))
+
+            norm = normalize_url(target)
+            vid = extract_youtube_id(norm)
+            token_map = build_token_map(norm, vid)
+            templates = template_repo.get_templates(is_youtube=bool(vid), category=cat)
+
+            urls = []
+            seen = set()
+            for t in templates:
+                u = replace_tokens(t["url"], token_map).strip()
+                if u and u.startswith(("http://", "https://")) and u not in seen:
+                    seen.add(u)
+                    urls.append(u)
+            if limit:
+                urls = urls[:limit]
+
+            self._send_json({"target": norm, "urls": urls, "total": len(urls)})
+            return
+
+        # 2. Live Concurrent Pinger (from h4cklinker & tegal1337)
+        elif parsed.path == "/api/ping":
+            target = payload.get("url", "https://example.com")
+            cat = payload.get("category", "all")
+            limit = int(payload.get("limit", 30))
+
+            norm = normalize_url(target)
+            vid = extract_youtube_id(norm)
+            token_map = build_token_map(norm, vid)
+            templates = template_repo.get_templates(is_youtube=bool(vid), category=cat)
+
+            targets = []
+            seen = set()
+            for t in templates:
+                u = replace_tokens(t["url"], token_map).strip()
+                if u and u.startswith(("http://", "https://")) and u not in seen:
+                    seen.add(u)
+                    targets.append({"url": u, "category": t["category"]})
+            if limit:
+                targets = targets[:limit]
+
+            results = []
+            for item in targets:
+                res = _sync_ping_urllib(item, timeout=3.5)
+                results.append(res.to_dict())
+
+            self._send_json({"results": results, "total": len(results)})
+            return
+
+        # 3. E-E-A-T Domain Vetting (from thelinkoster)
+        elif parsed.path == "/api/vet":
+            target = payload.get("target", "")
+            res = audit_url(target)
+            self._send_json(res.to_dict())
+            return
+
+        # 4. Contextual Anchor Text Generator (from contextual-backlink-generator)
+        elif parsed.path == "/api/anchors":
+            brand = payload.get("brand", "ApexBrand")
+            url = payload.get("url", "https://example.com")
+            kw = payload.get("keyword", "link building")
+            count = int(payload.get("count", 25))
+            anchors = generate_anchor_profile(brand, url, kw, count=count)
+            self._send_json({"anchors": anchors})
+            return
+
+        # 5. Google Disavow Generator (from Disavow-Generator)
+        elif parsed.path == "/api/disavow":
+            items = payload.get("items", [])
+            content = generate_disavow_content(items, domain_mode=True)
+            self._send_json({"content": content})
+            return
+
+        # 6. Marketplace Cart Checkout
+        elif parsed.path == "/api/cart/checkout":
             order_id = f"APX-{int(time.time())}-{len(ORDERS_LEDGER) + 101}"
             raw_record = json.dumps(payload, sort_keys=True)
             sig = compute_payload_hmac(raw_record)
@@ -420,6 +513,7 @@ class ApexLinkHandler(SimpleHTTPRequestHandler):
             self._send_json({"success": True, "order": order})
             return
 
+        # 7. Owner Verification
         elif parsed.path == "/api/owner/verify":
             candidate = payload.get("owner_id", "")
             authorized = verify_owner_access(candidate)
@@ -437,8 +531,8 @@ class ApexLinkHandler(SimpleHTTPRequestHandler):
 
 
 def start_server(host: str = "127.0.0.1", port: int = 8700):
-    server = HTTPServer((host, port), ApexLinkHandler)
-    print(f"[*] ApexLink Studio Running at http://{host}:{port}")
+    server = HTTPServer((host, port), UnifiedApexHandler)
+    print(f"[*] ApexLink All-In-One Studio Running at http://{host}:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

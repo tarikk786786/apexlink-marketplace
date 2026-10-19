@@ -7,9 +7,9 @@
   <!-- ========================================== -->
   <!-- COMPREHENSIVE SEO & METADATA ARCHITECTURE -->
   <!-- ========================================== -->
-  <title>ApexLink Studio — AI Link Building & Guest Post Marketplace | High-DA DoFollow Backlinks</title>
-  <meta name="description" content="ApexLink Studio is the premier AI-powered guest post and link building marketplace. Secure verified high-DA, high-DR dofollow backlinks across 140,000+ top global publications with guaranteed indexation and automated SEO auditing.">
-  <meta name="keywords" content="link building marketplace, buy guest posts, high da backlinks, dofollow link building, guest post marketplace, seo link agency, ahrefs dr90 backlinks, white hat link building, apexlink studio">
+  <title>ApexLink Studio — All-In-One AI Link Building, Pinger, Domain Auditor & Marketplace</title>
+  <meta name="description" content="ApexLink Studio is the unified SEO platform combining 140,000+ verified guest post publications, 4,600+ backlink directory generators, multi-threaded live pingers, E-E-A-T domain auditors, anchor matrix synthesizers, and Google Disavow generators.">
+  <meta name="keywords" content="link building marketplace, buy guest posts, backlink generator, bulk pinger, domain auditor, eeat seo, anchor text matrix, google disavow generator, apexlink studio, tarikk786786">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="tarikk786786">
   <meta name="theme-color" content="#030712">
@@ -18,8 +18,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tarikk786786.github.io/apexlink-marketplace/">
-  <meta property="og:title" content="ApexLink Studio — AI-Powered Link Building & Guest Post Marketplace">
-  <meta property="og:description" content="Buy contextual dofollow guest posts from 140,000+ vetted publications. Automated metric auditing with SEMrush, Ahrefs, and Moz data.">
+  <meta property="og:title" content="ApexLink Studio — Unified AI Link Building & SEO Engine">
+  <meta property="og:description" content="All-in-one SEO suite: 140,000+ guest post marketplace, 4,600+ backlink generator, concurrent pinger, E-E-A-T vetting, anchor matrix & Google disavow tools.">
   <meta property="og:site_name" content="ApexLink Studio">
   <meta property="og:locale" content="en_US">
 
@@ -27,8 +27,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tarikk786786">
   <meta name="twitter:creator" content="@tarikk786786">
-  <meta name="twitter:title" content="ApexLink Studio — AI-Powered Guest Post Marketplace">
-  <meta name="twitter:description" content="Scale your search rankings with 100% white-hat contextual backlinks from real publications.">
+  <meta name="twitter:title" content="ApexLink Studio — All-In-One SEO & Backlink Suite">
+  <meta name="twitter:description" content="Scale your search rankings with 100% white-hat contextual backlinks, automated pinging, and algorithmic domain auditing.">
 
   <!-- Structured Data: Organization & SoftwareApplication JSON-LD -->
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
           "@type": "Person",
           "name": "tarikk786786"
         },
-        "description": "Enterprise-grade AI guest post marketplace and automated link building platform."
+        "description": "Unified AI SEO suite: Marketplace, 4600+ link generator, pinger, E-E-A-T auditor & disavow tools."
       },
       {
         "@type": "SoftwareApplication",
@@ -56,28 +56,6 @@
           "price": "24.00",
           "priceCurrency": "USD"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What makes ApexLink Studio superior to legacy marketplaces?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ApexLink Studio combines verified real-time Ahrefs/Semrush traffic metrics, strict cryptographic owner and editorial checks, guaranteed permanent DoFollow backlinks, and zero private blog networks (PBNs)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are guest post backlinks permanent and indexable?",
-            "@type": "Question",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, every listing on ApexLink Studio offers permanent contextual placements with automated search engine pinging to ensure swift organic Google indexation."
-            }
-          }
-        ]
       }
     ]
   }
@@ -140,6 +118,12 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    .studio-tab-btn.active-tab {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(6, 182, 212, 0.25) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.6);
+      color: #ffffff;
+      box-shadow: 0 4px 18px -2px rgba(99, 102, 241, 0.35);
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
@@ -158,13 +142,13 @@
       </span>
     </div>
     <div class="flex items-center space-x-6 text-xs">
-      <a href="#marketplace" class="hover:text-white transition">Live Marketplace</a>
-      <a href="#how-it-works" class="hover:text-white transition">4-Step Flow</a>
-      <a href="#security" class="hover:text-white transition flex items-center text-cyan-brand">
-        <i class="fa-solid fa-shield-halved mr-1"></i> Security Protocol
-      </a>
-      <a href="https://github.com/tarikk786786" target="_blank" class="hover:text-white flex items-center">
-        <i class="fa-brands fa-github mr-1"></i> tarikk786786
+      <button onclick="switchStudioTab('marketplace')" class="hover:text-white transition">Marketplace</button>
+      <button onclick="switchStudioTab('generator')" class="hover:text-white transition">Auto Pinger</button>
+      <button onclick="switchStudioTab('auditor')" class="hover:text-white transition">Auditor</button>
+      <button onclick="switchStudioTab('anchors')" class="hover:text-white transition">Anchors</button>
+      <button onclick="switchStudioTab('disavow')" class="hover:text-white transition">Disavow</button>
+      <a href="https://github.com/tarikk786786/apexlink-marketplace" target="_blank" class="hover:text-white flex items-center text-cyan-brand">
+        <i class="fa-brands fa-github mr-1"></i> GitHub Repo
       </a>
     </div>
   </div>
@@ -185,21 +169,35 @@
             ApexLink<span class="text-cyan-brand font-black ml-0.5">.</span>
           </span>
           <span class="block text-[10px] tracking-widest uppercase text-indigo-300 font-mono -mt-1 font-semibold">
-            Enterprise Link Studio
+            All-In-One SEO Suite
           </span>
         </div>
       </a>
 
       <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-300">
-        <a href="#marketplace" class="text-white hover:text-cyan-brand transition flex items-center font-semibold">
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-gray-300">
+        <button onclick="switchStudioTab('marketplace')" class="text-white hover:text-cyan-brand transition flex items-center font-semibold">
           <span>Marketplace</span>
-          <span class="ml-2 px-2 py-0.5 text-[10px] font-mono font-bold bg-indigo-950 text-indigo-300 border border-indigo-700/60 rounded-full">140k+ Sites</span>
-        </a>
+          <span class="ml-1.5 px-1.5 py-0.5 text-[10px] font-mono font-bold bg-indigo-950 text-indigo-300 border border-indigo-700/60 rounded-full">140k+</span>
+        </button>
+        <button onclick="switchStudioTab('generator')" class="hover:text-cyan-brand transition flex items-center">
+          <i class="fa-solid fa-bolt-lightning text-amber-400 mr-1.5 text-xs"></i>
+          <span>Auto Pinger</span>
+          <span class="ml-1.5 px-1.5 py-0.5 text-[10px] font-mono font-bold bg-amber-950 text-amber-300 border border-amber-700/60 rounded-full">4.6k+</span>
+        </button>
+        <button onclick="switchStudioTab('auditor')" class="hover:text-cyan-brand transition flex items-center">
+          <i class="fa-solid fa-shield-halved text-cyan-brand mr-1.5 text-xs"></i>
+          <span>E-E-A-T Auditor</span>
+        </button>
+        <button onclick="switchStudioTab('anchors')" class="hover:text-cyan-brand transition flex items-center">
+          <i class="fa-solid fa-chart-pie text-purple-400 mr-1.5 text-xs"></i>
+          <span>Anchor Matrix</span>
+        </button>
+        <button onclick="switchStudioTab('disavow')" class="hover:text-cyan-brand transition flex items-center">
+          <i class="fa-solid fa-file-shield text-rose-400 mr-1.5 text-xs"></i>
+          <span>Disavow</span>
+        </button>
         <a href="#packages" class="hover:text-white transition">Packages</a>
-        <a href="#how-it-works" class="hover:text-white transition">Workflow</a>
-        <a href="#why-apex" class="hover:text-white transition">Why ApexLink</a>
-        <a href="#faq" class="hover:text-white transition">FAQ</a>
       </nav>
 
       <!-- Right Header Actions -->
@@ -216,10 +214,10 @@
           <span>Owner Locked</span>
         </button>
 
-        <a href="#marketplace" class="bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center">
-          <span>Launch Campaign</span>
+        <button onclick="switchStudioTab('marketplace')" class="bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center">
+          <span>Launch Workspace</span>
           <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-        </a>
+        </button>
       </div>
 
     </div>
@@ -228,30 +226,30 @@
   <!-- ========================================== -->
   <!-- HERO SECTION WITH AI SEARCH -->
   <!-- ========================================== -->
-  <section class="relative hero-glow pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
+  <section class="relative hero-glow pt-14 pb-16 md:pt-20 md:pb-24 overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
       
       <!-- Top Badge -->
       <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-indigo-950/80 border border-indigo-500/40 text-indigo-300 text-xs font-mono font-medium mb-8">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-        <span>NEXT-GEN AI LINK BUILDING &amp; INDEXING PLATFORM</span>
+        <span>ALL-IN-ONE ENTERPRISE SEO &amp; LINK ENGINE SUITE</span>
       </div>
 
       <!-- Main Heading -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15] mb-6">
-        Rank #1 on Google with <br class="hidden sm:block">
-        <span class="gradient-text">Contextual High-Authority</span> Backlinks
+        The Ultimate All-in-One <br class="hidden sm:block">
+        <span class="gradient-text">Backlink &amp; Authority Engine</span>
       </h1>
       
-      <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
-        Access 140,000+ verified real-world websites. Automated Ahrefs DR, SEMrush organic traffic, and Moz DA auditing with zero spam or private blog networks.
+      <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-normal leading-relaxed">
+        Integrates 140k+ Guest Post Marketplace, 4,600+ Directory &amp; Diagnostic URL Generators, Multi-Threaded Live Pinger, E-E-A-T Domain Auditor, Anchor Matrix &amp; Google Disavow Generator.
       </p>
 
       <!-- AI Search Bar -->
       <div class="glass-panel p-2.5 rounded-2xl max-w-3xl mx-auto flex items-center justify-between shadow-2xl mb-6">
         <div class="flex items-center flex-1 px-4">
           <i class="fa-solid fa-brain text-cyan-brand text-lg mr-3"></i>
-          <input type="text" id="heroSearchInput" onkeyup="if(event.key === 'Enter') handleSearch()" placeholder="Search by niche, domain (e.g. yahoo, forbes, tech), or keyword..." 
+          <input type="text" id="heroSearchInput" onkeyup="if(event.key === 'Enter') handleSearch()" placeholder="Search marketplace publishers or enter target domain..." 
             class="w-full bg-transparent outline-none text-white placeholder-gray-500 text-sm sm:text-base">
         </div>
         <button onclick="handleSearch()" class="bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold px-6 sm:px-8 py-3 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30 flex items-center shrink-0">
@@ -259,21 +257,32 @@
         </button>
       </div>
 
-      <!-- Quick Category Pills -->
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
-        <button onclick="filterCategory('all')" class="px-4 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs sm:text-sm hover:border-indigo-500 hover:text-white transition font-medium">All Niches</button>
-        <button onclick="filterCategory('News and Media')" class="px-4 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs sm:text-sm hover:border-indigo-500 hover:text-white transition font-medium">News &amp; Media</button>
-        <button onclick="filterCategory('Business')" class="px-4 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs sm:text-sm hover:border-indigo-500 hover:text-white transition font-medium">Business &amp; Finance</button>
-        <button onclick="filterCategory('Technology')" class="px-4 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs sm:text-sm hover:border-indigo-500 hover:text-white transition font-medium">Technology &amp; AI</button>
-        <button onclick="filterCategory('Press Release')" class="px-4 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs sm:text-sm hover:border-indigo-500 hover:text-white transition font-medium">Global Press Release</button>
+      <!-- Quick Action Pills -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
+        <button onclick="switchStudioTab('marketplace')" class="px-3.5 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs hover:border-indigo-500 hover:text-white transition font-medium">
+          <i class="fa-solid fa-store mr-1 text-indigo-400"></i> Guest Post Marketplace
+        </button>
+        <button onclick="switchStudioTab('generator')" class="px-3.5 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs hover:border-indigo-500 hover:text-white transition font-medium">
+          <i class="fa-solid fa-bolt-lightning mr-1 text-amber-400"></i> 4,600+ Auto Backlink Generator
+        </button>
+        <button onclick="switchStudioTab('auditor')" class="px-3.5 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs hover:border-indigo-500 hover:text-white transition font-medium">
+          <i class="fa-solid fa-shield-halved mr-1 text-cyan-brand"></i> E-E-A-T Domain Vetting
+        </button>
+        <button onclick="switchStudioTab('anchors')" class="px-3.5 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs hover:border-indigo-500 hover:text-white transition font-medium">
+          <i class="fa-solid fa-chart-pie mr-1 text-purple-400"></i> Contextual Anchor Matrix
+        </button>
+        <button onclick="switchStudioTab('disavow')" class="px-3.5 py-1.5 rounded-xl border border-gray-700/80 bg-gray-900/60 text-gray-300 text-xs hover:border-indigo-500 hover:text-white transition font-medium">
+          <i class="fa-solid fa-file-shield mr-1 text-rose-400"></i> Google Disavow Creator
+        </button>
       </div>
 
       <!-- Live Telemetry Badges -->
-      <div class="pt-8 border-t border-gray-800/80 flex flex-wrap items-center justify-center gap-8 text-xs text-gray-400 font-mono">
-        <span class="flex items-center"><i class="fa-solid fa-chart-line text-amber-400 mr-2"></i> SEMRUSH ORGANIC SYNC</span>
-        <span class="flex items-center"><i class="fa-solid fa-shield-virus text-indigo-400 mr-2"></i> AHREFS DR LIVE VERIFIED</span>
-        <span class="flex items-center"><i class="fa-solid fa-award text-cyan-brand mr-2"></i> MOZ DA ACCREDITED</span>
-        <span class="flex items-center"><i class="fa-solid fa-lock text-emerald-400 mr-2"></i> 100% WHITE-HAT ONLY</span>
+      <div class="pt-6 border-t border-gray-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400 font-mono">
+        <span class="flex items-center"><i class="fa-solid fa-chart-line text-amber-400 mr-2"></i> SEMRUSH SYNC</span>
+        <span class="flex items-center"><i class="fa-solid fa-shield-virus text-indigo-400 mr-2"></i> AHREFS DR LIVE</span>
+        <span class="flex items-center"><i class="fa-solid fa-bolt text-cyan-brand mr-2"></i> 4,600+ URL TEMPLATES</span>
+        <span class="flex items-center"><i class="fa-solid fa-microchip text-purple-400 mr-2"></i> CONCURRENT LIVE PINGER</span>
+        <span class="flex items-center"><i class="fa-solid fa-lock text-emerald-400 mr-2"></i> OWNER CRYPTO LOCKED</span>
       </div>
 
     </div>
@@ -290,15 +299,15 @@
           <i class="fa-solid fa-globe"></i>
         </div>
         <p class="text-3xl font-extrabold text-white font-mono">142,500+</p>
-        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Active Websites</p>
+        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Verified Market Websites</p>
       </div>
 
       <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
-        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3">
-          <i class="fa-solid fa-user-check"></i>
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-amber-400 flex items-center justify-center text-xl mb-3">
+          <i class="fa-solid fa-bolt-lightning"></i>
         </div>
-        <p class="text-3xl font-extrabold text-white font-mono">48,200+</p>
-        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Verified Publishers</p>
+        <p class="text-3xl font-extrabold text-white font-mono">4,640</p>
+        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Active Indexing Templates</p>
       </div>
 
       <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
@@ -306,118 +315,518 @@
           <i class="fa-solid fa-circle-check"></i>
         </div>
         <p class="text-3xl font-extrabold text-white font-mono">310,000+</p>
-        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Orders Completed</p>
+        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Orders &amp; Pings Broadcast</p>
       </div>
 
       <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
         <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-cyan-glow flex items-center justify-center text-xl mb-3">
-          <i class="fa-solid fa-bolt"></i>
+          <i class="fa-solid fa-shield-halved"></i>
         </div>
-        <p class="text-3xl font-extrabold text-white font-mono">99.98%</p>
-        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Indexation Guarantee</p>
+        <p class="text-3xl font-extrabold text-white font-mono">100%</p>
+        <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Penguin Safe &amp; PBN Proof</p>
       </div>
 
     </div>
   </section>
 
   <!-- ========================================== -->
-  <!-- MAIN MARKETPLACE DIRECTORY -->
+  <!-- UNIFIED ALL-IN-ONE STUDIO NAVIGATION TABS -->
   <!-- ========================================== -->
-  <section id="marketplace" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <section id="studio-workspace" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-4">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
       <div>
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">Verified Marketplace Directory</h2>
-        <p class="text-gray-400 text-sm mt-1">Order guest post publishing with contextual DoFollow anchors and live traffic metrics.</p>
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-950/80 border border-indigo-700/60 text-cyan-brand text-xs font-mono font-semibold mb-2">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>ALL-IN-ONE WORKSPACE</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Enterprise SEO Workspace</h2>
+        <p class="text-gray-400 text-sm mt-1">Select an integrated tool module to start link building, live pinging, domain vetting, or matrix generation.</p>
       </div>
-      <div class="text-xs font-mono text-cyan-brand bg-cyan-950/60 px-3.5 py-1.5 rounded-xl border border-cyan-800/50">
-        <i class="fa-solid fa-arrows-rotate animate-spin mr-1.5"></i> REAL-TIME INVENTORY SYNC
+      <div class="flex items-center space-x-2 text-xs font-mono">
+        <span class="px-3 py-1.5 rounded-xl bg-gray-900 border border-gray-800 text-gray-300">
+          <i class="fa-solid fa-code-merge mr-1 text-indigo-400"></i> 6 Integrated Systems
+        </span>
+        <span class="px-3 py-1.5 rounded-xl bg-gray-900 border border-gray-800 text-emerald-400">
+          <i class="fa-solid fa-circle-check mr-1"></i> Active
+        </span>
       </div>
     </div>
 
-    <!-- Filters Control Bar -->
-    <div class="glass-panel rounded-2xl p-6 mb-6">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
-        
-        <!-- Keyword Search -->
-        <div class="lg:col-span-2">
-          <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Filter Domain</label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
-              <i class="fa-solid fa-magnifying-glass text-xs"></i>
+    <!-- Mode Selector Tabs -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 p-2 bg-gray-950/80 border border-gray-800/80 rounded-2xl glass-panel shadow-xl">
+      <button onclick="switchStudioTab('marketplace')" id="tab-btn-marketplace" class="studio-tab-btn active-tab flex items-center justify-center space-x-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold transition">
+        <i class="fa-solid fa-store"></i>
+        <span>Marketplace (140k+)</span>
+      </button>
+      <button onclick="switchStudioTab('generator')" id="tab-btn-generator" class="studio-tab-btn flex items-center justify-center space-x-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-bolt-lightning text-amber-400"></i>
+        <span>Auto Pinger (4.6k+)</span>
+      </button>
+      <button onclick="switchStudioTab('auditor')" id="tab-btn-auditor" class="studio-tab-btn flex items-center justify-center space-x-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-shield-halved text-cyan-brand"></i>
+        <span>E-E-A-T Auditor</span>
+      </button>
+      <button onclick="switchStudioTab('anchors')" id="tab-btn-anchors" class="studio-tab-btn flex items-center justify-center space-x-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-chart-pie text-purple-400"></i>
+        <span>Anchor Matrix</span>
+      </button>
+      <button onclick="switchStudioTab('disavow')" id="tab-btn-disavow" class="studio-tab-btn flex items-center justify-center space-x-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-gray-400 hover:text-white transition col-span-2 sm:col-span-1">
+        <i class="fa-solid fa-file-shield text-rose-400"></i>
+        <span>Disavow Creator</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ======================================================= -->
+  <!-- TAB VIEW 1: MARKETPLACE DIRECTORY & CART                -->
+  <!-- ======================================================= -->
+  <div id="tab-view-marketplace">
+    <section id="marketplace" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Verified Marketplace Directory</h2>
+          <p class="text-gray-400 text-sm mt-1">Order guest post publishing with contextual DoFollow anchors and live traffic metrics.</p>
+        </div>
+        <div class="text-xs font-mono text-cyan-brand bg-cyan-950/60 px-3.5 py-1.5 rounded-xl border border-cyan-800/50">
+          <i class="fa-solid fa-arrows-rotate animate-spin mr-1.5"></i> REAL-TIME INVENTORY SYNC
+        </div>
+      </div>
+
+      <!-- Filters Control Bar -->
+      <div class="glass-panel rounded-2xl p-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+          
+          <!-- Keyword Search -->
+          <div class="lg:col-span-2">
+            <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Filter Domain</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+              </span>
+              <input type="text" id="tableSearchInput" oninput="applyFilters()" placeholder="Filter domain or niche..." 
+                class="w-full pl-8 pr-3 py-2 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-brand">
+            </div>
+          </div>
+
+          <!-- Niche Category -->
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Niche</label>
+            <select id="filterCategorySelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
+              <option value="all">All Niches</option>
+              <option value="News and Media">News &amp; Media</option>
+              <option value="Business">Business</option>
+              <option value="Finance">Finance</option>
+              <option value="Technology">Technology</option>
+              <option value="Press Release">Press Release</option>
+            </select>
+          </div>
+
+          <!-- Min DR -->
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Min DR: <span id="drLabel" class="text-cyan-brand font-bold">0</span></label>
+            <input type="range" id="minDrRange" min="0" max="95" value="0" oninput="document.getElementById('drLabel').innerText = this.value; applyFilters()" 
+              class="w-full accent-cyan-400">
+          </div>
+
+          <!-- Link Type -->
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Link Type</label>
+            <select id="linkTypeSelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
+              <option value="all">All Links</option>
+              <option value="DoFollow">DoFollow Only</option>
+              <option value="NoFollow">NoFollow Only</option>
+            </select>
+          </div>
+
+          <!-- Sort Option -->
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Sort Metric</label>
+            <select id="sortSelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
+              <option value="default">Default Priority</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="dr_desc">Ahrefs DR (Highest)</option>
+              <option value="traffic_desc">Monthly Traffic (Highest)</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Table Container -->
+      <div class="glass-panel rounded-2xl overflow-hidden border border-gray-800">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse font-sans">
+            <thead class="bg-gray-900/90 text-gray-400 font-mono uppercase text-[11px] border-b border-gray-800">
+              <tr>
+                <th class="py-4 px-4 text-center sticky left-0 bg-gray-900 z-10 w-28">Price</th>
+                <th class="py-4 px-4 min-w-[240px]">Website &amp; Terms</th>
+                <th class="py-4 px-4 min-w-[130px] text-center">Niche Category</th>
+                <th class="py-4 px-4 min-w-[140px] text-center">Monthly Traffic</th>
+                <th class="py-4 px-4 min-w-[160px] text-center">Authority (DR | DA | AS)</th>
+                <th class="py-4 px-4 min-w-[150px] text-center">Backlink Ratio</th>
+                <th class="py-4 px-4 min-w-[110px] text-center">Domain Age</th>
+                <th class="py-4 px-4 min-w-[90px] text-center">Deals</th>
+              </tr>
+            </thead>
+            <tbody id="publishersTableBody" class="divide-y divide-gray-800/60 font-mono text-gray-300">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- TAB VIEW 2: 4,600+ BACKLINK GENERATOR & LIVE PINGER     -->
+  <!-- ======================================================= -->
+  <div id="tab-view-generator" class="hidden">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Module Header -->
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 mb-8 border border-amber-500/20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-950/80 text-amber-400 border border-amber-800/60 text-xs font-mono font-semibold mb-2">
+              <i class="fa-solid fa-bolt-lightning"></i>
+              <span>4,600+ DIRECTORY &amp; PING ENGINE</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Automated Backlink Generator &amp; Multi-Threaded Pinger</h2>
+            <p class="text-gray-400 text-sm mt-1">Generate diagnostic, directory, archive and WHOIS backlinks, then ping them concurrently to stimulate crawler discovery.</p>
+          </div>
+          <div class="flex items-center space-x-3 text-xs font-mono">
+            <span class="px-3 py-1.5 rounded-xl bg-gray-900 border border-gray-800 text-amber-300">
+              <i class="fa-solid fa-database mr-1"></i> 4,640 Templates
             </span>
-            <input type="text" id="tableSearchInput" oninput="applyFilters()" placeholder="Filter domain or niche..." 
-              class="w-full pl-8 pr-3 py-2 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-brand">
+            <span class="px-3 py-1.5 rounded-xl bg-gray-900 border border-gray-800 text-cyan-brand">
+              <i class="fa-solid fa-tower-broadcast mr-1"></i> Multi-Threaded Ping
+            </span>
           </div>
         </div>
 
-        <!-- Niche Category -->
-        <div>
-          <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Niche</label>
-          <select id="filterCategorySelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
-            <option value="all">All Niches</option>
-            <option value="News and Media">News &amp; Media</option>
-            <option value="Business">Business</option>
-            <option value="Finance">Finance</option>
-            <option value="Technology">Technology</option>
-            <option value="Press Release">Press Release</option>
-          </select>
+        <!-- Input Form -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-gray-800/80">
+          <div class="md:col-span-2">
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Target Website / YouTube URL</label>
+            <input type="text" id="genTargetUrl" value="https://example.com" placeholder="e.g. https://mywebsite.com or https://youtube.com/watch?v=..." 
+              class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Category</label>
+            <select id="genCategory" class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-amber-400">
+              <option value="all">All Categories (4,600+)</option>
+              <option value="web-directories">SEO Web Directories</option>
+              <option value="diagnostics-stats">Domain &amp; Speed Diagnostics</option>
+              <option value="search-engines-cache">Search Indexers &amp; Cache</option>
+              <option value="social-bookmarks">Social Bookmarking</option>
+              <option value="archive-aggregators">Archive &amp; Wayback Services</option>
+              <option value="ping-services">RPC Ping Services</option>
+              <option value="reputation-checkers">Trust &amp; Safety Trackers</option>
+              <option value="whois-lookups">DNS &amp; WHOIS Indexers</option>
+              <option value="subdomain-trackers">Network Scanners</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Quantity Limit</label>
+            <select id="genLimit" class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-amber-400">
+              <option value="50">50 High-Priority</option>
+              <option value="100" selected>100 Balanced</option>
+              <option value="250">250 Extended</option>
+              <option value="500">500 Deep Coverage</option>
+              <option value="1000">1,000 High-Volume</option>
+              <option value="4640">All 4,640 Templates</option>
+            </select>
+          </div>
         </div>
 
-        <!-- Min DR -->
-        <div>
-          <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Min DR: <span id="drLabel" class="text-cyan-brand font-bold">0</span></label>
-          <input type="range" id="minDrRange" min="0" max="95" value="0" oninput="document.getElementById('drLabel').innerText = this.value; applyFilters()" 
-            class="w-full accent-cyan-400">
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <button onclick="runBacklinkGenerator()" id="btnGenerateUrls" class="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition flex items-center shadow-md">
+            <i class="fa-solid fa-list-check mr-2"></i> Generate Backlink URLs
+          </button>
+          <button onclick="runBacklinkPinger()" id="btnPingUrls" class="bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition flex items-center shadow-md">
+            <i class="fa-solid fa-tower-broadcast mr-2"></i> Live Concurrent Ping
+          </button>
+          <button onclick="copyGeneratedUrls()" id="btnCopyUrls" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+            <i class="fa-solid fa-copy mr-1.5"></i> Copy URLs
+          </button>
+          <button onclick="downloadGeneratedUrls('txt')" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+            <i class="fa-solid fa-download mr-1.5"></i> Export TXT
+          </button>
+          <button onclick="downloadGeneratedUrls('csv')" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+            <i class="fa-solid fa-file-csv mr-1.5"></i> Export CSV
+          </button>
         </div>
-
-        <!-- Link Type -->
-        <div>
-          <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Link Type</label>
-          <select id="linkTypeSelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
-            <option value="all">All Links</option>
-            <option value="DoFollow">DoFollow Only</option>
-            <option value="NoFollow">NoFollow Only</option>
-          </select>
-        </div>
-
-        <!-- Sort Option -->
-        <div>
-          <label class="block text-xs font-mono font-semibold text-gray-400 uppercase mb-1.5">Sort Metric</label>
-          <select id="sortSelect" onchange="applyFilters()" class="w-full py-2 px-2.5 text-xs bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
-            <option value="default">Default Priority</option>
-            <option value="price_asc">Price: Low to High</option>
-            <option value="price_desc">Price: High to Low</option>
-            <option value="dr_desc">Ahrefs DR (Highest)</option>
-            <option value="traffic_desc">Monthly Traffic (Highest)</option>
-          </select>
-        </div>
-
       </div>
-    </div>
 
-    <!-- Table Container -->
-    <div class="glass-panel rounded-2xl overflow-hidden border border-gray-800">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs border-collapse font-sans">
-          <thead class="bg-gray-900/90 text-gray-400 font-mono uppercase text-[11px] border-b border-gray-800">
-            <tr>
-              <th class="py-4 px-4 text-center sticky left-0 bg-gray-900 z-10 w-28">Price</th>
-              <th class="py-4 px-4 min-w-[240px]">Website &amp; Terms</th>
-              <th class="py-4 px-4 min-w-[130px] text-center">Niche Category</th>
-              <th class="py-4 px-4 min-w-[140px] text-center">Monthly Traffic</th>
-              <th class="py-4 px-4 min-w-[160px] text-center">Authority (DR | DA | AS)</th>
-              <th class="py-4 px-4 min-w-[150px] text-center">Backlink Ratio</th>
-              <th class="py-4 px-4 min-w-[110px] text-center">Domain Age</th>
-              <th class="py-4 px-4 min-w-[90px] text-center">Deals</th>
-            </tr>
-          </thead>
-          <tbody id="publishersTableBody" class="divide-y divide-gray-800/60 font-mono text-gray-300">
-            <!-- Dynamically populated rows -->
-          </tbody>
-        </table>
+      <!-- Live Results Area -->
+      <div id="genResultsContainer" class="glass-panel rounded-2xl p-6 border border-gray-800">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider font-mono flex items-center">
+            <i class="fa-solid fa-terminal text-cyan-brand mr-2"></i> Engine Results Feed
+          </h3>
+          <span id="genCountBadge" class="text-xs font-mono px-2.5 py-1 rounded-full bg-gray-900 border border-gray-800 text-gray-400">
+            0 URLs
+          </span>
+        </div>
+        
+        <div id="genOutputFeed" class="max-h-96 overflow-y-auto space-y-2 font-mono text-xs text-gray-300 p-4 bg-gray-950/90 rounded-xl border border-gray-800">
+          <p class="text-gray-500 text-center py-8 font-sans">Enter your target URL above and click <strong>Generate Backlink URLs</strong> or <strong>Live Concurrent Ping</strong> to start.</p>
+        </div>
       </div>
-    </div>
-  </section>
+
+    </section>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- TAB VIEW 3: E-E-A-T & TOXIC PBN DOMAIN AUDITOR          -->
+  <!-- ======================================================= -->
+  <div id="tab-view-auditor" class="hidden">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Module Header -->
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 mb-8 border border-cyan-500/20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/80 text-cyan-brand border border-cyan-800/60 text-xs font-mono font-semibold mb-2">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>E-E-A-T &amp; PBN SPAM AUDITOR</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Google E-E-A-T &amp; Toxic PBN Domain Auditor</h2>
+            <p class="text-gray-400 text-sm mt-1">Audit any outreach domain for author attribution, contact legitimacy, SSL certificates, schema markup, and toxic PBN spam footprints.</p>
+          </div>
+          <div class="text-xs font-mono text-cyan-brand bg-gray-900 px-3.5 py-2 rounded-xl border border-gray-800">
+            <i class="fa-solid fa-user-shield mr-1"></i> Penguin &amp; Spam Brain Proof
+          </div>
+        </div>
+
+        <!-- Input Form -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-800/80">
+          <input type="text" id="vetTargetInput" value="https://techcrunch.com" placeholder="e.g. https://targetdomain.com or example.com" 
+            class="flex-1 text-xs p-3.5 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-brand">
+          <button onclick="runDomainAudit()" id="btnRunAudit" class="bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold px-8 py-3.5 rounded-xl text-xs transition flex items-center justify-center shrink-0 shadow-md">
+            <i class="fa-solid fa-magnifying-glass-chart mr-2"></i> Audit Domain Authority
+          </button>
+        </div>
+      </div>
+
+      <!-- Audit Results Card -->
+      <div id="auditResultsCard" class="glass-panel rounded-2xl p-6 sm:p-8 border border-gray-800 hidden">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-800">
+          <div class="flex items-center space-x-4">
+            <div id="auditScoreGauge" class="w-20 h-20 rounded-2xl bg-indigo-950 border-2 border-indigo-500 flex flex-col items-center justify-center">
+              <span id="auditScoreVal" class="text-2xl font-black text-white font-mono">0</span>
+              <span class="text-[9px] uppercase font-mono text-cyan-brand font-bold">TRUST</span>
+            </div>
+            <div>
+              <h3 id="auditDomainTitle" class="text-xl font-bold text-white font-mono">domain.com</h3>
+              <p id="auditVerdictLabel" class="text-xs font-semibold mt-1">Calculating verdict...</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="sendAuditedDomainToDisavow()" id="btnSendToDisavow" class="bg-rose-950/80 hover:bg-rose-900 border border-rose-800/80 text-rose-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+              <i class="fa-solid fa-ban mr-1.5"></i> Add to Disavow List
+            </button>
+          </div>
+        </div>
+
+        <!-- Signal Grids -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <!-- E-E-A-T Signals -->
+          <div class="bg-gray-900/60 p-5 rounded-xl border border-gray-800">
+            <h4 class="text-xs font-mono font-bold text-cyan-brand uppercase mb-4 flex items-center">
+              <i class="fa-solid fa-award mr-2"></i> E-E-A-T Authority Signals
+            </h4>
+            <div id="auditEeatSignals" class="space-y-2.5 text-xs"></div>
+          </div>
+
+          <!-- Risk & Spam Signals -->
+          <div class="bg-gray-900/60 p-5 rounded-xl border border-gray-800">
+            <h4 class="text-xs font-mono font-bold text-rose-400 uppercase mb-4 flex items-center">
+              <i class="fa-solid fa-triangle-exclamation mr-2"></i> Spam &amp; PBN Risk Signals
+            </h4>
+            <div id="auditSpamSignals" class="space-y-2.5 text-xs"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- TAB VIEW 4: CONTEXTUAL ANCHOR TEXT DIVERSITY MATRIX     -->
+  <!-- ======================================================= -->
+  <div id="tab-view-anchors" class="hidden">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Module Header -->
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 mb-8 border border-purple-500/20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-950/80 text-purple-300 border border-purple-800/60 text-xs font-mono font-semibold mb-2">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>PENGUIN-SAFE ANCHOR MATRIX</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Contextual Anchor Text Diversity Matrix</h2>
+            <p class="text-gray-400 text-sm mt-1">Mathematically generate natural anchor text distributions across Branded, Naked URL, Partial Match, and Generic types to prevent over-optimization penalties.</p>
+          </div>
+          <div class="text-xs font-mono text-purple-300 bg-gray-900 px-3.5 py-2 rounded-xl border border-gray-800">
+            <i class="fa-solid fa-shield-virus mr-1"></i> Penalty Immune
+          </div>
+        </div>
+
+        <!-- Form Inputs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-800/80">
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Brand Name</label>
+            <input type="text" id="anchorBrand" value="ApexLink" placeholder="e.g. ApexLink" 
+              class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Target Landing Page</label>
+            <input type="text" id="anchorUrl" value="https://example.com/software" placeholder="e.g. https://mywebsite.com/software" 
+              class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Primary Keyword</label>
+            <input type="text" id="anchorKeyword" value="link building marketplace" placeholder="e.g. link building tools" 
+              class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1">Quantity</label>
+            <select id="anchorCount" class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-purple-400">
+              <option value="20">20 Anchors (Compact)</option>
+              <option value="35" selected>35 Anchors (Standard)</option>
+              <option value="50">50 Anchors (Aggressive)</option>
+              <option value="100">100 Anchors (Enterprise)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <button onclick="runAnchorGenerator()" id="btnGenAnchors" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition flex items-center shadow-md">
+            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Synthesize Anchor Matrix
+          </button>
+          <button onclick="copyAnchorMatrix()" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+            <i class="fa-solid fa-copy mr-1.5"></i> Copy All
+          </button>
+          <button onclick="downloadAnchorMatrixCsv()" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+            <i class="fa-solid fa-file-csv mr-1.5"></i> Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Anchors Distribution & Table -->
+      <div id="anchorResultsContainer" class="glass-panel rounded-2xl p-6 border border-gray-800 hidden">
+        <!-- Distribution Ratios -->
+        <div class="mb-6 pb-6 border-b border-gray-800">
+          <h4 class="text-xs font-mono font-bold text-gray-300 uppercase mb-3">Target Natural Distribution Ratios</h4>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center font-mono text-xs">
+            <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+              <span class="text-cyan-brand font-bold block text-lg">25%</span>
+              <span class="text-gray-400 text-[10px]">Branded</span>
+            </div>
+            <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+              <span class="text-indigo-400 font-bold block text-lg">25%</span>
+              <span class="text-gray-400 text-[10px]">Naked URLs</span>
+            </div>
+            <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+              <span class="text-purple-400 font-bold block text-lg">20%</span>
+              <span class="text-gray-400 text-[10px]">Brand + Keyword</span>
+            </div>
+            <div class="p-3 bg-gray-900 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-bold block text-lg">20%</span>
+              <span class="text-gray-400 text-[10px]">Partial / LSI</span>
+            </div>
+            <div class="p-3 bg-gray-900 rounded-xl border border-gray-800 col-span-2 sm:col-span-1">
+              <span class="text-emerald-400 font-bold block text-lg">10%</span>
+              <span class="text-gray-400 text-[10px]">Generic Action</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs font-sans">
+            <thead class="bg-gray-900 font-mono text-gray-400 uppercase text-[11px] border-b border-gray-800">
+              <tr>
+                <th class="py-3 px-4">#</th>
+                <th class="py-3 px-4">Anchor Text</th>
+                <th class="py-3 px-4">Type</th>
+                <th class="py-3 px-4">Recommended Placement Context</th>
+                <th class="py-3 px-4 text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody id="anchorsTableBody" class="divide-y divide-gray-800/60 font-mono text-gray-300">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ======================================================= -->
+  <!-- TAB VIEW 5: GOOGLE SEARCH CONSOLE DISAVOW BUILDER        -->
+  <!-- ======================================================= -->
+  <div id="tab-view-disavow" class="hidden">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Module Header -->
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 mb-8 border border-rose-500/20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-rose-950/80 text-rose-300 border border-rose-800/60 text-xs font-mono font-semibold mb-2">
+              <i class="fa-solid fa-file-shield"></i>
+              <span>GOOGLE SEARCH CONSOLE DISAVOW</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Google Disavow File Generator (`disavow.txt`)</h2>
+            <p class="text-gray-400 text-sm mt-1">Format toxic, spam, or PBN backlink domains according to Google Search Console disavow protocols to clean penalty footprints.</p>
+          </div>
+          <div class="text-xs font-mono text-rose-300 bg-gray-900 px-3.5 py-2 rounded-xl border border-gray-800">
+            <i class="fa-solid fa-shield-virus mr-1"></i> Google RFC Format
+          </div>
+        </div>
+
+        <!-- Input Textarea -->
+        <div class="space-y-4 pt-4 border-t border-gray-800/80">
+          <div>
+            <label class="block text-xs font-mono font-semibold text-gray-300 uppercase mb-1.5">Paste Toxic Backlink Domains or URLs (One per line)</label>
+            <textarea id="disavowInputText" rows="6" placeholder="spam-domain.com&#10;https://toxic-pbn.net/article.html&#10;hacked-casino-links.xyz" 
+              class="w-full font-mono text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-rose-400"></textarea>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <label class="flex items-center space-x-2 text-xs text-gray-300 cursor-pointer">
+              <input type="checkbox" id="disavowDomainMode" checked class="accent-rose-500 rounded">
+              <span>Always prefix root domains with <code class="text-rose-400 font-mono font-bold">domain:</code> (Recommended by Google)</span>
+            </label>
+
+            <div class="flex items-center gap-3">
+              <button onclick="runDisavowGenerator()" id="btnGenDisavow" class="bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition flex items-center shadow-md">
+                <i class="fa-solid fa-file-code mr-2"></i> Generate disavow.txt
+              </button>
+              <button onclick="copyDisavowContent()" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+                <i class="fa-solid fa-copy mr-1.5"></i> Copy
+              </button>
+              <button onclick="downloadDisavowFile()" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 font-semibold px-4 py-2.5 rounded-xl text-xs transition flex items-center">
+                <i class="fa-solid fa-download mr-1.5"></i> Download File
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Area -->
+      <div class="glass-panel rounded-2xl p-6 border border-gray-800">
+        <h4 class="text-xs font-mono font-bold text-gray-300 uppercase mb-3 flex items-center">
+          <i class="fa-solid fa-terminal text-rose-400 mr-2"></i> disavow.txt Preview (UTF-8 Plain Text)
+        </h4>
+        <pre id="disavowPreview" class="p-4 bg-gray-950/90 rounded-xl border border-gray-800 font-mono text-xs text-gray-300 max-h-80 overflow-y-auto"># Click "Generate disavow.txt" above to preview output...</pre>
+      </div>
+
+    </section>
+  </div>
 
   <!-- ========================================== -->
   <!-- MEDIA TICKER: AS FEATURED ON -->
@@ -483,19 +892,19 @@
             <span class="text-gray-400 text-xs font-mono">/ one-time</span>
           </div>
           <ul class="space-y-3 text-xs text-gray-300 font-sans">
-            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> 12 High-Tier Guest Posts (Ahrefs DR 70+)</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> Over 500k+ Real Monthly Organic Visitors</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> Penguin-Safe Anchor Text Distribution</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> White-Label PDF Client Audit Report</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> 10 Verified High-DR70+ Publications</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> Tiered Synergistic Anchor Text Architecture</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> 1,500-Word In-Depth Industry Thought Pieces</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-cyan-brand mr-2.5"></i> Instant Search Engine Indexing Pings</li>
           </ul>
         </div>
-        <button onclick="quickOrderPackage('High-Impact DR70+ Tier', 499)" class="w-full mt-8 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-lg shadow-indigo-600/30">Order Growth Tier</button>
+        <button onclick="quickOrderPackage('High-Impact DR70+ Tier', 499)" class="w-full mt-8 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-lg shadow-indigo-600/30">Deploy Growth Tier</button>
       </div>
 
       <!-- Package 3 -->
       <div class="glass-panel rounded-2xl p-8 flex flex-col justify-between glass-panel-hover transition">
         <div>
-          <span class="px-3 py-1 text-[11px] font-mono font-semibold rounded-full bg-purple-950 text-purple-300 border border-purple-700/50">ENTERPRISE PR</span>
+          <span class="px-3 py-1 text-[11px] font-mono font-semibold rounded-full bg-indigo-950 text-indigo-300 border border-indigo-700/50">ENTERPRISE SCALE</span>
           <h3 class="text-xl font-bold text-white mt-4">Global Media Syndication</h3>
           <p class="text-gray-400 text-xs mt-1">Brand authority on international news wires.</p>
           <div class="my-6">
@@ -573,7 +982,7 @@
             <span class="text-gray-500">SIGNATURE_CHECK:</span> PASS_VALIDATED
           </div>
           <div class="bg-gray-900/90 px-4 py-2 rounded-xl border border-gray-800 text-gray-300">
-            <span class="text-gray-500">GIT_UPSTREAM:</span> github.com/tarikk786786
+            <span class="text-gray-500">GIT_UPSTREAM:</span> github.com/tarikk786786/apexlink-marketplace
           </div>
         </div>
       </div>
@@ -612,11 +1021,21 @@
 
       <div class="glass-panel rounded-xl overflow-hidden">
         <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center text-sm">
-          <span>What is the turnaround time for publication?</span>
+          <span>How do the 4,600+ backlink generator and pinger work?</span>
           <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
         </button>
         <div class="faq-answer hidden px-5 pb-5 text-xs text-gray-400 leading-relaxed border-t border-gray-800/60 pt-3">
-          Standard turnaround time is 2 to 5 business days depending on the selected publication. Turnaround windows are guaranteed on every marketplace card.
+          The engine replaces variables across 4,640 verified web directories, domain diagnostic audits, search engine cache flushers, and archive services. Concurrent pings then ping these endpoints to notify web spiders and search crawlers of your target content.
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center text-sm">
+          <span>Why is anchor text diversity important for Google Penguin?</span>
+          <i class="fa-solid fa-chevron-down text-gray-500 transition-transform"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-xs text-gray-400 leading-relaxed border-t border-gray-800/60 pt-3">
+          Over-optimizing exact match anchor texts triggers algorithmic penalties under Google's SpamBrain and Penguin systems. Our Anchor Matrix enforces a natural distribution: 25% branded, 25% naked URLs, 20% partial match, 20% brand+keyword, and 10% generic.
         </div>
       </div>
     </div>
@@ -661,33 +1080,39 @@
                 class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-brand">
             </div>
             <div>
-              <label class="block text-xs text-gray-400 mb-1">Content Editorial Option</label>
-              <select id="cartContentOption" onchange="updateCartTotals()" class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white">
-                <option value="publisher_writes">Publisher writes editorial article (+ $15/post)</option>
-                <option value="provide_own">I will provide my own article ($0)</option>
+              <label class="block text-xs text-gray-400 mb-1">Article Content Options</label>
+              <select id="cartContentOption" onchange="updateCartTotals()" class="w-full text-xs p-3 bg-gray-900 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-brand">
+                <option value="publisher_writes">Publisher Writes Article (+$15/post)</option>
+                <option value="client_provides">I will supply finished 1,000+ word article ($0)</option>
               </select>
             </div>
           </div>
         </div>
 
-        <!-- Footer Checkout -->
-        <div class="p-6 border-t border-gray-800 bg-gray-900/60 space-y-4">
-          <div class="flex justify-between items-center text-xs font-mono">
-            <span class="text-gray-400">Subtotal:</span>
-            <span id="cartSubtotal" class="font-bold text-white">$0 USD</span>
+        <!-- Footer / Checkout -->
+        <div class="p-6 border-t border-gray-800 bg-gray-950/80 space-y-3">
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Subtotal</span>
+            <span id="cartSubtotal" class="font-mono text-white">$0 USD</span>
           </div>
-          <div class="flex justify-between items-center text-xs font-mono">
-            <span class="text-gray-400">Editorial Writing:</span>
-            <span id="cartWritingFee" class="text-gray-300">$0 USD</span>
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Content Production</span>
+            <span id="cartWritingFee" class="font-mono text-white">$0 USD</span>
           </div>
-          <div class="flex justify-between items-center text-sm font-extrabold border-t border-gray-800 pt-3 font-mono">
-            <span class="text-white">Total Order:</span>
-            <span id="cartTotal" class="text-cyan-brand text-xl">$0 USD</span>
+          <div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-gray-800">
+            <span>Total Payable</span>
+            <span id="cartTotal" class="font-mono text-cyan-brand">$0 USD</span>
           </div>
-          <button onclick="handleCheckout()" id="checkoutBtn" class="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-lg shadow-indigo-600/30 flex items-center justify-center space-x-2">
+
+          <button onclick="handleCheckout()" id="checkoutBtn" class="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-lg shadow-indigo-600/30 flex items-center justify-center">
             <span>Place Secure Order</span>
-            <i class="fa-solid fa-lock text-xs"></i>
+            <i class="fa-solid fa-lock text-xs ml-2"></i>
           </button>
+          
+          <div class="flex items-center justify-center space-x-2 text-[10px] text-gray-500 font-mono">
+            <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+            <span>256-BIT ENCRYPTED &bull; HMAC ORDER SIGNED</span>
+          </div>
         </div>
 
       </div>
@@ -698,23 +1123,34 @@
   <!-- OWNER VERIFICATION MODAL -->
   <!-- ========================================== -->
   <div id="ownerModal" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
-    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeOwnerModal()"></div>
-    <div class="fixed inset-0 flex items-center justify-center p-4">
-      <div class="glass-panel rounded-2xl max-w-md w-full p-6 border border-indigo-500/40 relative z-10 space-y-4">
-        <div class="flex items-center space-x-3 text-cyan-brand">
-          <i class="fa-solid fa-shield-halved text-2xl"></i>
-          <h4 class="font-bold text-white text-base">Owner Cryptographic Lock</h4>
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeOwnerModal()"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="bg-gray-950 border border-indigo-500/50 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative z-10">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Owner Cryptographic Identity</h3>
+          </div>
+          <button onclick="closeOwnerModal()" class="text-gray-400 hover:text-white">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          This system is bound to GitHub identity <strong class="text-white">tarikk786786</strong>. Only the authenticated master owner has permission to push revisions, update upstream endpoints, and modify pricing contracts.
+
+        <p class="text-xs text-gray-300 leading-relaxed mb-4">
+          ApexLink Studio is locked to authorized operator <strong class="text-cyan-brand font-mono">tarikk786786</strong>. Git commits and runtime modifications require valid credentials.
         </p>
-        <div class="bg-gray-950 p-3 rounded-xl border border-gray-800 font-mono text-[11px] text-gray-300 space-y-1">
-          <div>OWNER: tarikk786786</div>
-          <div>STATUS: 100% EXCLUSIVE_MODIFICATION_LOCKED</div>
-          <div>HASH: 8f3b23e80816a7f0...</div>
+
+        <div class="bg-gray-900 p-4 rounded-xl font-mono text-[11px] text-gray-300 space-y-1.5 mb-6 border border-gray-800">
+          <div><span class="text-gray-500">AUTHORIZED_OWNER:</span> tarikk786786</div>
+          <div><span class="text-gray-500">EMAIL:</span> 139125059+tarikk786786@users.noreply.github.com</div>
+          <div><span class="text-gray-500">SYSTEM_HASH:</span> PASS_VERIFIED</div>
+          <div><span class="text-gray-500">REPOSITORY:</span> github.com/tarikk786786/apexlink-marketplace</div>
         </div>
-        <button onclick="closeOwnerModal()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2.5 rounded-xl transition">
-          Dismiss Verification
+
+        <button onclick="closeOwnerModal()" class="w-full bg-gray-900 hover:bg-gray-800 border border-gray-700 text-white font-bold py-2.5 rounded-xl text-xs transition">
+          Close Window
         </button>
       </div>
     </div>
@@ -723,45 +1159,55 @@
   <!-- ========================================== -->
   <!-- FOOTER -->
   <!-- ========================================== -->
-  <footer class="bg-gray-950 text-gray-400 text-xs border-t border-gray-800/80 pt-16 pb-12 mt-auto">
+  <footer class="border-t border-gray-800/80 bg-gray-950 py-16 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12 text-xs text-gray-400">
         
-        <div class="col-span-2">
-          <div class="flex items-center space-x-3 mb-4">
-            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
-              <i class="fa-solid fa-network-wired"></i>
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white">
+              <i class="fa-solid fa-network-wired text-sm"></i>
             </div>
             <span class="text-xl font-extrabold text-white">ApexLink<span class="text-cyan-brand">.</span></span>
           </div>
-          <p class="text-gray-400 text-xs leading-relaxed max-w-sm mb-4">
-            The next-generation AI guest post and backlink marketplace. Created, secured, and maintained exclusively by <a href="https://github.com/tarikk786786" class="text-cyan-brand hover:underline font-mono">tarikk786786</a>.
+          <p class="text-gray-400 max-w-sm leading-relaxed">
+            All-in-one AI guest post marketplace, 4,600+ backlink generator, live pinger, and automated domain vetting engine.
           </p>
-          <p class="text-gray-300 font-mono text-[11px]">Repository: github.com/tarikk786786/apexlink-marketplace</p>
+          <div class="flex items-center space-x-4 pt-2">
+            <a href="https://github.com/tarikk786786/apexlink-marketplace" target="_blank" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+              <i class="fa-brands fa-github text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+              <i class="fa-brands fa-x-twitter text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+              <i class="fa-brands fa-linkedin text-sm"></i>
+            </a>
+          </div>
         </div>
 
         <div>
-          <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px] font-mono">Marketplace</h5>
+          <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px] font-mono">Platform Suite</h5>
           <ul class="space-y-2">
-            <li><a href="#marketplace" class="hover:text-white transition">All Publications</a></li>
-            <li><a href="#packages" class="hover:text-white transition">Packages</a></li>
-            <li><a href="#marketplace" class="hover:text-white transition">Press Releases</a></li>
-            <li><a href="#marketplace" class="hover:text-white transition">Link Insertions</a></li>
+            <li><button onclick="switchStudioTab('marketplace')" class="hover:text-white transition">Marketplace Directory</button></li>
+            <li><button onclick="switchStudioTab('generator')" class="hover:text-white transition">Auto Backlink Generator</button></li>
+            <li><button onclick="switchStudioTab('generator')" class="hover:text-white transition">Concurrent Multi-Pinger</button></li>
+            <li><button onclick="switchStudioTab('auditor')" class="hover:text-white transition">E-E-A-T Domain Auditor</button></li>
           </ul>
         </div>
 
         <div>
           <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px] font-mono">SEO Tools</h5>
           <ul class="space-y-2">
-            <li><a href="#marketplace" class="hover:text-white transition">Backlink Generator</a></li>
-            <li><a href="#marketplace" class="hover:text-white transition">Bulk DR Checker</a></li>
-            <li><a href="#marketplace" class="hover:text-white transition">Anchor Matrix</a></li>
-            <li><a href="#marketplace" class="hover:text-white transition">Disavow Creator</a></li>
+            <li><button onclick="switchStudioTab('anchors')" class="hover:text-white transition">Anchor Matrix Generator</button></li>
+            <li><button onclick="switchStudioTab('disavow')" class="hover:text-white transition">Google Disavow Tool</button></li>
+            <li><a href="#packages" class="hover:text-white transition">Growth Packages</a></li>
+            <li><a href="#how-it-works" class="hover:text-white transition">Workflow Engine</a></li>
           </ul>
         </div>
 
         <div>
-          <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px] font-mono">Legal &amp; Security</h5>
+          <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px] font-mono">Security &amp; Legal</h5>
           <ul class="space-y-2">
             <li><a href="#security" class="hover:text-white transition">Owner Lock Protocol</a></li>
             <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
@@ -774,20 +1220,56 @@
 
       <div class="border-t border-gray-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-gray-500 text-[11px] font-mono">
         <p>&copy; 2026 ApexLink Studio by tarikk786786. All rights reserved.</p>
-        <p class="mt-2 sm:mt-0 text-gray-400">Owner Identity Verified: tarikk786786</p>
+        <p class="mt-2 sm:mt-0 text-gray-400">Cryptographically Locked to Owner: tarikk786786</p>
       </div>
     </div>
   </footer>
 
-  <!-- SCRIPT APPLICATION LOGIC -->
+  <!-- ========================================== -->
+  <!-- COMPLETE SCRIPT APPLICATION LOGIC          -->
+  <!-- ========================================== -->
   <script>
     let publishers = [];
     let cart = [];
+    let generatedUrlsList = [];
+    let lastAuditedDomain = '';
+    let currentAnchorData = [];
 
     window.addEventListener('DOMContentLoaded', async () => {
       await loadPublishers();
     });
 
+    // ----------------------------------------
+    // TAB SWITCHING LOGIC
+    // ----------------------------------------
+    function switchStudioTab(tabName) {
+      const tabs = ['marketplace', 'generator', 'auditor', 'anchors', 'disavow'];
+      tabs.forEach(t => {
+        const view = document.getElementById(`tab-view-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (view) {
+          if (t === tabName) {
+            view.classList.remove('hidden');
+          } else {
+            view.classList.add('hidden');
+          }
+        }
+        if (btn) {
+          if (t === tabName) {
+            btn.classList.add('active-tab');
+            btn.classList.remove('text-gray-400');
+          } else {
+            btn.classList.remove('active-tab');
+            btn.classList.add('text-gray-400');
+          }
+        }
+      });
+      document.getElementById('studio-workspace').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ----------------------------------------
+    // MARKETPLACE LOGIC
+    // ----------------------------------------
     async function loadPublishers() {
       try {
         const resp = await fetch('/api/publishers');
@@ -927,18 +1409,363 @@
 
     function handleSearch() {
       const val = document.getElementById('heroSearchInput').value.trim();
+      if (!val) return;
       document.getElementById('tableSearchInput').value = val;
       applyFilters();
-      document.getElementById('marketplace').scrollIntoView({behavior: 'smooth'});
+      switchStudioTab('marketplace');
     }
 
-    function filterCategory(cat) {
-      document.getElementById('filterCategorySelect').value = cat;
-      applyFilters();
-      document.getElementById('marketplace').scrollIntoView({behavior: 'smooth'});
+    // ----------------------------------------
+    // 4,600+ AUTO BACKLINK GENERATOR & PINGER
+    // ----------------------------------------
+    async function runBacklinkGenerator() {
+      const url = document.getElementById('genTargetUrl').value.trim();
+      const category = document.getElementById('genCategory').value;
+      const limit = document.getElementById('genLimit').value;
+      if (!url) return alert('Please enter a target URL.');
+
+      const btn = document.getElementById('btnGenerateUrls');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Generating...';
+
+      try {
+        const resp = await fetch('/api/generate', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ url: url, category: category, limit: parseInt(limit) })
+        });
+        const res = await resp.json();
+        generatedUrlsList = res.urls || [];
+
+        document.getElementById('genCountBadge').innerText = `${generatedUrlsList.length} URLs Ready`;
+        const feed = document.getElementById('genOutputFeed');
+        feed.innerHTML = '';
+
+        if (!generatedUrlsList.length) {
+          feed.innerHTML = '<p class="text-rose-400 py-4 text-center">No templates matched the selected criteria.</p>';
+        } else {
+          generatedUrlsList.forEach((u, i) => {
+            const div = document.createElement('div');
+            div.className = 'flex items-center justify-between p-2 rounded-lg bg-gray-900/80 border border-gray-800/80 hover:border-gray-700 transition';
+            div.innerHTML = `
+              <div class="flex items-center space-x-2 truncate">
+                <span class="text-gray-500 font-mono text-[10px] w-8">#${i+1}</span>
+                <a href="${u}" target="_blank" rel="nofollow" class="text-cyan-brand hover:underline truncate">${u}</a>
+              </div>
+              <button onclick="copyToClipboard('${u}')" class="text-gray-400 hover:text-white px-2 py-1 shrink-0" title="Copy URL">
+                <i class="fa-solid fa-copy text-xs"></i>
+              </button>
+            `;
+            feed.appendChild(div);
+          });
+        }
+      } catch (e) {
+        alert('Generation failed: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-list-check mr-2"></i> Generate Backlink URLs';
+      }
     }
 
-    // Cart Management
+    async function runBacklinkPinger() {
+      const url = document.getElementById('genTargetUrl').value.trim();
+      const category = document.getElementById('genCategory').value;
+      const limit = Math.min(parseInt(document.getElementById('genLimit').value) || 30, 60);
+      if (!url) return alert('Please enter a target URL.');
+
+      const btn = document.getElementById('btnPingUrls');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Pinging Web Nodes...';
+
+      const feed = document.getElementById('genOutputFeed');
+      feed.innerHTML = '<div class="p-4 text-center text-cyan-brand"><i class="fa-solid fa-tower-broadcast animate-pulse text-2xl mb-2"></i><p>Broadcasting live concurrent pings to search engine & directory crawlers...</p></div>';
+
+      try {
+        const resp = await fetch('/api/ping', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ url: url, category: category, limit: limit })
+        });
+        const res = await resp.json();
+        const results = res.results || [];
+
+        document.getElementById('genCountBadge').innerText = `${results.length} Nodes Pinged`;
+        feed.innerHTML = '';
+
+        results.forEach((r, i) => {
+          const div = document.createElement('div');
+          const isSuccess = r.success;
+          const badgeClass = isSuccess ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-gray-900 text-gray-400 border border-gray-800';
+          div.className = 'flex items-center justify-between p-2 rounded-lg bg-gray-900/80 border border-gray-800/80 text-xs font-mono';
+          div.innerHTML = `
+            <div class="flex items-center space-x-2 truncate">
+              <span class="text-gray-500 text-[10px] w-6">#${i+1}</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${badgeClass}">HTTP ${r.status_code || 'CONN'}</span>
+              <span class="truncate text-gray-300">${r.url}</span>
+            </div>
+            <span class="text-cyan-brand shrink-0 text-[11px] ml-2">${r.latency_ms}ms</span>
+          `;
+          feed.appendChild(div);
+        });
+      } catch (e) {
+        alert('Ping execution error: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-tower-broadcast mr-2"></i> Live Concurrent Ping';
+      }
+    }
+
+    function copyGeneratedUrls() {
+      if (!generatedUrlsList.length) return alert('No generated URLs to copy.');
+      copyToClipboard(generatedUrlsList.join('\n'));
+      alert(`Copied ${generatedUrlsList.length} backlink URLs to clipboard!`);
+    }
+
+    function downloadGeneratedUrls(format) {
+      if (!generatedUrlsList.length) return alert('No generated URLs to export.');
+      let content = '';
+      let mime = 'text/plain';
+      let filename = `apexlink_backlinks_${Date.now()}.${format}`;
+
+      if (format === 'csv') {
+        content = 'index,backlink_url\n' + generatedUrlsList.map((u, i) => `${i+1},"${u}"`).join('\n');
+        mime = 'text/csv';
+      } else {
+        content = generatedUrlsList.join('\n');
+      }
+
+      const blob = new Blob([content], { type: mime });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+
+    // ----------------------------------------
+    // E-E-A-T & PBN AUDITOR
+    // ----------------------------------------
+    async function runDomainAudit() {
+      const target = document.getElementById('vetTargetInput').value.trim();
+      if (!target) return alert('Please enter a target domain or URL.');
+
+      const btn = document.getElementById('btnRunAudit');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Auditing Signals...';
+
+      try {
+        const resp = await fetch('/api/vet', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ target: target })
+        });
+        const res = await resp.json();
+        lastAuditedDomain = res.domain || target;
+
+        document.getElementById('auditResultsCard').classList.remove('hidden');
+        document.getElementById('auditDomainTitle').innerText = res.domain || target;
+        document.getElementById('auditScoreVal').innerText = res.authority_score || 0;
+
+        const isSafe = res.is_safe;
+        const verdict = document.getElementById('auditVerdictLabel');
+        const gauge = document.getElementById('auditScoreGauge');
+
+        if (isSafe) {
+          verdict.innerHTML = '<span class="text-emerald-400"><i class="fa-solid fa-circle-check mr-1"></i> VERIFIED SAFE FOR OUTREACH &amp; BACKLINKS</span>';
+          gauge.className = 'w-20 h-20 rounded-2xl bg-emerald-950/80 border-2 border-emerald-500 flex flex-col items-center justify-center';
+        } else {
+          verdict.innerHTML = '<span class="text-rose-400"><i class="fa-solid fa-triangle-exclamation mr-1"></i> HIGH RISK DETECTED — REJECT / DISAVOW</span>';
+          gauge.className = 'w-20 h-20 rounded-2xl bg-rose-950/80 border-2 border-rose-500 flex flex-col items-center justify-center';
+        }
+
+        // Render E-E-A-T signals
+        const eeatContainer = document.getElementById('auditEeatSignals');
+        eeatContainer.innerHTML = '';
+        const eeatItems = [
+          { label: 'Author Attribution & Bios', pass: res.has_authorship },
+          { label: 'Contact Details & Verification', pass: res.has_contact_page },
+          { label: 'Privacy Policy & Legal Terms', pass: res.has_privacy_policy },
+          { label: 'About Us / Brand Entity Data', pass: res.has_about_page },
+          { label: 'HTTPS SSL Encryption', pass: res.is_https },
+          { label: 'Schema.org Structured Data', pass: res.has_schema_markup }
+        ];
+        eeatItems.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'flex items-center justify-between p-2 rounded-lg bg-gray-950 border border-gray-800';
+          div.innerHTML = `
+            <span class="text-gray-300">${item.label}</span>
+            <span class="${item.pass ? 'text-emerald-400 font-bold' : 'text-gray-500'}">
+              <i class="fa-solid ${item.pass ? 'fa-check' : 'fa-xmark'}"></i>
+            </span>
+          `;
+          eeatContainer.appendChild(div);
+        });
+
+        // Render Spam signals
+        const spamContainer = document.getElementById('auditSpamSignals');
+        spamContainer.innerHTML = '';
+        const spamItems = [
+          { label: 'PBN Footprint Risk', flagged: res.is_pbn_footprint },
+          { label: 'High-Risk Outbound Links', flagged: res.has_toxic_outbounds },
+          { label: 'Keyword Stuffing Anomaly', flagged: res.keyword_stuffing_score > 60 },
+          { label: 'Anchor Text Manipulation', flagged: res.anchor_risk_score > 60 }
+        ];
+        spamItems.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'flex items-center justify-between p-2 rounded-lg bg-gray-950 border border-gray-800';
+          div.innerHTML = `
+            <span class="text-gray-300">${item.label}</span>
+            <span class="${item.flagged ? 'text-rose-400 font-bold' : 'text-emerald-400'}">
+              ${item.flagged ? '<i class="fa-solid fa-triangle-exclamation mr-1"></i> High Risk' : '<i class="fa-solid fa-shield-halved mr-1"></i> Clean'}
+            </span>
+          `;
+          spamContainer.appendChild(div);
+        });
+
+      } catch (e) {
+        alert('Audit failed: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-magnifying-glass-chart mr-2"></i> Audit Domain Authority';
+      }
+    }
+
+    function sendAuditedDomainToDisavow() {
+      if (!lastAuditedDomain) return;
+      const ta = document.getElementById('disavowInputText');
+      ta.value = (ta.value ? ta.value + '\n' : '') + lastAuditedDomain;
+      switchStudioTab('disavow');
+      runDisavowGenerator();
+    }
+
+    // ----------------------------------------
+    // CONTEXTUAL ANCHOR TEXT MATRIX
+    // ----------------------------------------
+    async function runAnchorGenerator() {
+      const brand = document.getElementById('anchorBrand').value.trim();
+      const url = document.getElementById('anchorUrl').value.trim();
+      const kw = document.getElementById('anchorKeyword').value.trim();
+      const count = document.getElementById('anchorCount').value;
+
+      if (!brand || !kw) return alert('Please enter both brand name and keyword.');
+
+      const btn = document.getElementById('btnGenAnchors');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Synthesizing Matrix...';
+
+      try {
+        const resp = await fetch('/api/anchors', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ brand: brand, url: url, keyword: kw, count: parseInt(count) })
+        });
+        const res = await resp.json();
+        currentAnchorData = res.anchors || [];
+
+        document.getElementById('anchorResultsContainer').classList.remove('hidden');
+        const tbody = document.getElementById('anchorsTableBody');
+        tbody.innerHTML = '';
+
+        currentAnchorData.forEach((a, i) => {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-gray-900/60 transition-colors border-b border-gray-800/60';
+          
+          let badgeColor = 'bg-cyan-950 text-cyan-300 border-cyan-800/60';
+          if (a.type === 'exact_match') badgeColor = 'bg-rose-950 text-rose-400 border-rose-800/60';
+          if (a.type === 'branded') badgeColor = 'bg-indigo-950 text-indigo-300 border-indigo-800/60';
+          if (a.type === 'naked_url') badgeColor = 'bg-blue-950 text-blue-300 border-blue-800/60';
+          if (a.type === 'generic') badgeColor = 'bg-emerald-950 text-emerald-400 border-emerald-800/60';
+
+          tr.innerHTML = `
+            <td class="py-3 px-4 text-gray-500 font-mono text-[10px]">#${i+1}</td>
+            <td class="py-3 px-4 font-bold text-white font-mono">${a.text}</td>
+            <td class="py-3 px-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${badgeColor}">${a.type}</span>
+            </td>
+            <td class="py-3 px-4 text-gray-400 font-sans text-xs italic">"${a.sample_sentence || 'N/A'}"</td>
+            <td class="py-3 px-4 text-center">
+              <button onclick="copyToClipboard('${a.text}')" class="text-gray-400 hover:text-white px-2 py-1" title="Copy Anchor">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+      } catch (e) {
+        alert('Anchor synthesis error: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Synthesize Anchor Matrix';
+      }
+    }
+
+    function copyAnchorMatrix() {
+      if (!currentAnchorData.length) return alert('No anchor data to copy.');
+      const text = currentAnchorData.map(a => a.text).join('\n');
+      copyToClipboard(text);
+      alert(`Copied ${currentAnchorData.length} anchor variations to clipboard!`);
+    }
+
+    function downloadAnchorMatrixCsv() {
+      if (!currentAnchorData.length) return alert('No anchor data to export.');
+      const header = 'index,anchor_text,type,sample_sentence\n';
+      const rows = currentAnchorData.map((a, i) => `${i+1},"${a.text}","${a.type}","${(a.sample_sentence||'').replace(/"/g, '""')}"`).join('\n');
+      const blob = new Blob([header + rows], { type: 'text/csv' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `apexlink_anchor_matrix_${Date.now()}.csv`;
+      a.click();
+    }
+
+    // ----------------------------------------
+    // GOOGLE DISAVOW TOOL
+    // ----------------------------------------
+    async function runDisavowGenerator() {
+      const raw = document.getElementById('disavowInputText').value.trim();
+      const domainMode = document.getElementById('disavowDomainMode').checked;
+      if (!raw) return alert('Please enter at least one URL or domain to disavow.');
+
+      const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+      const btn = document.getElementById('btnGenDisavow');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Building disavow.txt...';
+
+      try {
+        const resp = await fetch('/api/disavow', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ items: lines, domain_mode: domainMode })
+        });
+        const res = await resp.json();
+        document.getElementById('disavowPreview').innerText = res.content || '';
+      } catch (e) {
+        alert('Disavow build error: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-file-code mr-2"></i> Generate disavow.txt';
+      }
+    }
+
+    function copyDisavowContent() {
+      const content = document.getElementById('disavowPreview').innerText;
+      if (!content || content.startsWith('# Click "Generate')) return alert('Generate disavow output first.');
+      copyToClipboard(content);
+      alert('Disavow file content copied to clipboard!');
+    }
+
+    function downloadDisavowFile() {
+      const content = document.getElementById('disavowPreview').innerText;
+      if (!content || content.startsWith('# Click "Generate')) return alert('Generate disavow output first.');
+      const blob = new Blob([content], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'disavow.txt';
+      a.click();
+    }
+
+    // ----------------------------------------
+    // CART & CHECKOUT MANAGEMENT
+    // ----------------------------------------
     function addToCart(websiteId) {
       const site = publishers.find(s => s.id === websiteId);
       if (!site) return;
@@ -1056,7 +1883,22 @@
       }
     }
 
-    // Owner Modal
+    // ----------------------------------------
+    // UTILITIES
+    // ----------------------------------------
+    function copyToClipboard(text) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    }
+
     function showOwnerModal() {
       document.getElementById('ownerModal').classList.remove('hidden');
     }
@@ -1064,7 +1906,6 @@
       document.getElementById('ownerModal').classList.add('hidden');
     }
 
-    // FAQ Accordion
     function toggleFaq(btn) {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector('i');
