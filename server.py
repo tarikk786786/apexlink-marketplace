@@ -1,12 +1,13 @@
 """
-ApexLink Studio — Unified Enterprise SEO & Link Building Suite
-Integrates:
-1. Vefogix-style 140,000+ Guest Post Marketplace with real-time Ahrefs/Semrush metrics
-2. High-throughput 4,600+ Directory, Archive & Web Diagnostic Generator & Pinger
-3. E-E-A-T & Toxic PBN Domain Auditor
-4. Contextual Penguin-Safe Anchor Text Diversity Matrix
-5. Google Search Console Disavow Generator
-6. Cryptographic Owner & Modification Lock (tarikk786786)
+ApexLink Studio — Unified 100% Free SEO & Backlink Power Tools Platform
+Engineered for direct generation, auditing, pinging, and analysis:
+1. 4,640+ Web Directory, Archive & Diagnostic Generator (Zero Cost)
+2. High-Throughput Concurrent Live Pinger & Crawler Broadcaster
+3. Google E-E-A-T Domain Authority & Toxic PBN Spam Auditor
+4. Contextual Penguin-Safe Anchor Text Diversity Matrix Generator
+5. Google Search Console Disavow File Builder (disavow.txt)
+6. High-Authority Media & Outreach Directory Explorer
+7. Cryptographic Owner & Code Integrity Lock (tarikk786786)
 """
 
 import json
@@ -42,14 +43,12 @@ from vetting.auditor import audit_url, audit_batch
 from vetting.disavow import generate_disavow_content
 from contextual.anchors import generate_anchor_profile
 
-# Verified High-Authority Publications Database
-PUBLISHERS_DB = [
+# High-Authority Outreach & Publication Intel Database (100% Free Domain Explorer)
+DOMAIN_EXPLORER_DB = [
     {
-        "id": "apx-1",
+        "id": "dom-1",
         "domain": "manilatimes.net",
         "sample_url": "https://www.manilatimes.net/business/article",
-        "price": 24,
-        "currency": "USD",
         "category": "News and Media",
         "categories": ["News and Media", "Business", "General"],
         "traffic_semrush": "742K",
@@ -66,14 +65,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "710K",
         "nofollow_backlinks": "218K",
         "domain_age": "28Y 9M",
-        "deals_completed": 92
+        "outreach_status": "Open for Pitches"
     },
     {
-        "id": "apx-2",
+        "id": "dom-2",
         "domain": "finance.yahoo.com",
         "sample_url": "https://finance.yahoo.com/news/article",
-        "price": 75,
-        "currency": "USD",
         "category": "Finance",
         "categories": ["Finance", "News and Media", "Business"],
         "traffic_semrush": "124.5M",
@@ -90,14 +87,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "14.8M",
         "nofollow_backlinks": "5.3M",
         "domain_age": "30Y 2M",
-        "deals_completed": 156
+        "outreach_status": "Syndication Available"
     },
     {
-        "id": "apx-3",
+        "id": "dom-3",
         "domain": "businessinsider.com",
         "sample_url": "https://www.businessinsider.com/business-news",
-        "price": 149,
-        "currency": "USD",
         "category": "Business",
         "categories": ["Business", "Technology", "Finance"],
         "traffic_semrush": "46.8M",
@@ -114,14 +109,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "9.2M",
         "nofollow_backlinks": "2.5M",
         "domain_age": "18Y 6M",
-        "deals_completed": 124
+        "outreach_status": "Editorial Review"
     },
     {
-        "id": "apx-4",
+        "id": "dom-4",
         "domain": "digitaljournal.com",
         "sample_url": "https://www.digitaljournal.com/pr/news",
-        "price": 38,
-        "currency": "USD",
         "category": "News and Media",
         "categories": ["News and Media", "Technology", "General"],
         "traffic_semrush": "1.3M",
@@ -138,19 +131,17 @@ PUBLISHERS_DB = [
         "followed_backlinks": "995K",
         "nofollow_backlinks": "330K",
         "domain_age": "24Y 1M",
-        "deals_completed": 105
+        "outreach_status": "Open for Pitches"
     },
     {
-        "id": "apx-5",
+        "id": "dom-5",
         "domain": "techcrunch.com",
         "sample_url": "https://techcrunch.com/startups",
-        "price": 285,
-        "currency": "USD",
         "category": "Technology",
         "categories": ["Technology", "Startups", "AI & Software"],
-        "traffic_semrush": "19.1M",
-        "traffic_ahrefs": "12.8M",
-        "traffic_num": 19100000,
+        "traffic_semrush": "14.2M",
+        "traffic_ahrefs": "9.8M",
+        "traffic_num": 14200000,
         "dr": 93,
         "da": 92,
         "as_score": 95,
@@ -159,94 +150,64 @@ PUBLISHERS_DB = [
         "turnaround": "5 Days",
         "country": "United States",
         "country_extra": "Global",
-        "followed_backlinks": "5.8M",
+        "followed_backlinks": "6.1M",
         "nofollow_backlinks": "1.9M",
-        "domain_age": "20Y 5M",
-        "deals_completed": 72
+        "domain_age": "19Y 11M",
+        "outreach_status": "Editorial Review"
     },
     {
-        "id": "apx-6",
+        "id": "dom-6",
         "domain": "apnews.com",
         "sample_url": "https://apnews.com/press-releases",
-        "price": 92,
-        "currency": "USD",
-        "category": "News and Media",
-        "categories": ["News and Media", "Press Release", "Global"],
-        "traffic_semrush": "67.1M",
-        "traffic_ahrefs": "43.5M",
-        "traffic_num": 67100000,
-        "dr": 91,
-        "da": 90,
-        "as_score": 96,
-        "max_links": 2,
-        "link_type": "NoFollow",
-        "turnaround": "2 Days",
-        "country": "United States",
-        "country_extra": "Global",
-        "followed_backlinks": "12.5M",
-        "nofollow_backlinks": "3.9M",
-        "domain_age": "29Y 8M",
-        "deals_completed": 138
-    },
-    {
-        "id": "apx-7",
-        "domain": "venturebeat.com",
-        "sample_url": "https://venturebeat.com/ai",
-        "price": 199,
-        "currency": "USD",
-        "category": "Technology",
-        "categories": ["Technology", "AI & Machine Learning", "Business"],
-        "traffic_semrush": "9.2M",
-        "traffic_ahrefs": "5.7M",
-        "traffic_num": 9200000,
-        "dr": 89,
-        "da": 88,
-        "as_score": 83,
-        "max_links": 2,
-        "link_type": "DoFollow",
-        "turnaround": "4 Days",
-        "country": "United States",
-        "country_extra": "+3 Others",
-        "followed_backlinks": "3.6M",
-        "nofollow_backlinks": "1.2M",
-        "domain_age": "19Y 2M",
-        "deals_completed": 82
-    },
-    {
-        "id": "apx-8",
-        "domain": "globenewswire.com",
-        "sample_url": "https://www.globenewswire.com/news-release",
-        "price": 68,
-        "currency": "USD",
         "category": "Press Release",
-        "categories": ["Press Release", "Business", "News and Media"],
-        "traffic_semrush": "14.8M",
-        "traffic_ahrefs": "10.2M",
-        "traffic_num": 14800000,
-        "dr": 88,
-        "da": 86,
-        "as_score": 81,
+        "categories": ["Press Release", "News and Media", "General"],
+        "traffic_semrush": "82.4M",
+        "traffic_ahrefs": "51.3M",
+        "traffic_num": 82400000,
+        "dr": 93,
+        "da": 92,
+        "as_score": 98,
         "max_links": 3,
         "link_type": "DoFollow",
         "turnaround": "1 Day",
         "country": "United States",
-        "country_extra": "+6 Others",
-        "followed_backlinks": "4.4M",
-        "nofollow_backlinks": "1.4M",
-        "domain_age": "26Y 4M",
-        "deals_completed": 184
+        "country_extra": "Global",
+        "followed_backlinks": "12.4M",
+        "nofollow_backlinks": "4.1M",
+        "domain_age": "26Y 3M",
+        "outreach_status": "Press Wire Active"
     },
     {
-        "id": "apx-9",
+        "id": "dom-7",
+        "domain": "globenewswire.com",
+        "sample_url": "https://www.globenewswire.com/news-release",
+        "category": "Press Release",
+        "categories": ["Press Release", "Business", "Finance"],
+        "traffic_semrush": "6.7M",
+        "traffic_ahrefs": "4.2M",
+        "traffic_num": 6700000,
+        "dr": 89,
+        "da": 88,
+        "as_score": 84,
+        "max_links": 3,
+        "link_type": "DoFollow",
+        "turnaround": "1 Day",
+        "country": "United States",
+        "country_extra": "+4 Others",
+        "followed_backlinks": "3.8M",
+        "nofollow_backlinks": "1.2M",
+        "domain_age": "27Y 5M",
+        "outreach_status": "Press Wire Active"
+    },
+    {
+        "id": "dom-8",
         "domain": "usatoday.com",
         "sample_url": "https://www.usatoday.com/money",
-        "price": 165,
-        "currency": "USD",
         "category": "News and Media",
-        "categories": ["News and Media", "Lifestyle", "Business"],
-        "traffic_semrush": "79.8M",
-        "traffic_ahrefs": "55.4M",
-        "traffic_num": 79800000,
+        "categories": ["News and Media", "Business", "Lifestyle"],
+        "traffic_semrush": "95.1M",
+        "traffic_ahrefs": "62.0M",
+        "traffic_num": 95100000,
         "dr": 93,
         "da": 92,
         "as_score": 98,
@@ -258,14 +219,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "18.9M",
         "nofollow_backlinks": "6.4M",
         "domain_age": "32Y 1M",
-        "deals_completed": 98
+        "outreach_status": "Syndication Available"
     },
     {
-        "id": "apx-10",
+        "id": "dom-9",
         "domain": "forbes.com",
         "sample_url": "https://www.forbes.com/business",
-        "price": 460,
-        "currency": "USD",
         "category": "Business",
         "categories": ["Business", "Leadership", "Finance"],
         "traffic_semrush": "148.0M",
@@ -282,14 +241,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "25.6M",
         "nofollow_backlinks": "8.7M",
         "domain_age": "29Y 4M",
-        "deals_completed": 61
+        "outreach_status": "Editorial Review"
     },
     {
-        "id": "apx-11",
+        "id": "dom-10",
         "domain": "entrepreneur.com",
         "sample_url": "https://www.entrepreneur.com/article",
-        "price": 225,
-        "currency": "USD",
         "category": "Business",
         "categories": ["Business", "Marketing", "Startups"],
         "traffic_semrush": "17.4M",
@@ -306,14 +263,12 @@ PUBLISHERS_DB = [
         "followed_backlinks": "5.3M",
         "nofollow_backlinks": "1.8M",
         "domain_age": "27Y 10M",
-        "deals_completed": 94
+        "outreach_status": "Open for Pitches"
     },
     {
-        "id": "apx-12",
+        "id": "dom-11",
         "domain": "mashable.com",
         "sample_url": "https://mashable.com/tech",
-        "price": 180,
-        "currency": "USD",
         "category": "Technology",
         "categories": ["Technology", "Culture", "Digital Marketing"],
         "traffic_semrush": "22.5M",
@@ -330,11 +285,9 @@ PUBLISHERS_DB = [
         "followed_backlinks": "7.8M",
         "nofollow_backlinks": "2.2M",
         "domain_age": "19Y 8M",
-        "deals_completed": 88
+        "outreach_status": "Open for Pitches"
     }
 ]
-
-ORDERS_LEDGER = []
 
 
 class UnifiedApexHandler(SimpleHTTPRequestHandler):
@@ -347,60 +300,62 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
 
-        if parsed.path in ["/api/publishers", "/api/websites"]:
+        # Free High-Authority Domain Explorer
+        if parsed.path in ["/api/publishers", "/api/websites", "/api/domains"]:
             qs = urllib.parse.parse_qs(parsed.query)
             q = qs.get("q", [""])[0].lower().strip()
             cat = qs.get("category", ["all"])[0]
             min_dr = int(qs.get("min_dr", [0])[0])
             min_da = int(qs.get("min_da", [0])[0])
-            max_price = int(qs.get("max_price", [9999])[0])
             link_type = qs.get("link_type", ["all"])[0]
             sort_by = qs.get("sort", ["default"])[0]
 
             filtered = []
-            for w in PUBLISHERS_DB:
+            for w in DOMAIN_EXPLORER_DB:
                 if q and (q not in w["domain"].lower() and not any(q in c.lower() for c in w["categories"])):
                     continue
                 if cat != "all" and cat != w["category"] and cat not in w["categories"]:
                     continue
                 if w["dr"] < min_dr or w["da"] < min_da:
                     continue
-                if w["price"] > max_price:
-                    continue
                 if link_type != "all" and w["link_type"].lower() != link_type.lower():
                     continue
                 filtered.append(w)
 
-            if sort_by == "price_asc":
-                filtered.sort(key=lambda x: x["price"])
-            elif sort_by == "price_desc":
-                filtered.sort(key=lambda x: x["price"], reverse=True)
-            elif sort_by == "dr_desc":
+            if sort_by == "dr_desc":
                 filtered.sort(key=lambda x: x["dr"], reverse=True)
+            elif sort_by == "da_desc":
+                filtered.sort(key=lambda x: x["da"], reverse=True)
             elif sort_by == "traffic_desc":
                 filtered.sort(key=lambda x: x["traffic_num"], reverse=True)
+            elif sort_by == "domain_asc":
+                filtered.sort(key=lambda x: x["domain"])
 
             self._send_json({"total": len(filtered), "data": filtered})
             return
 
         elif parsed.path == "/api/stats":
             self._send_json({
-                "registered_websites": "142,500+",
-                "publishers_writers": "48,200+",
-                "tasks_completed": "310,000+",
+                "platform": "ApexLink Studio Tools",
+                "tier": "100% Free & Open Utility Suite",
                 "indexing_templates": template_repo.total_count,
+                "verified_domains_indexed": len(DOMAIN_EXPLORER_DB),
                 "guarantee_uptime": "99.98%",
                 "owner_identity": AUTHORIZED_OWNER_ID,
-                "security_status": "LOCKED_AUTHORIZED_OWNER_ONLY"
+                "security_status": "LOCKED_AUTHORIZED_OWNER_ONLY",
+                "available_tools": [
+                    "4640+ Backlink URL Generator",
+                    "Multi-Threaded Live Pinger",
+                    "Google E-E-A-T Domain Auditor",
+                    "Penguin-Safe Anchor Diversity Matrix",
+                    "Google Search Console Disavow Builder",
+                    "High-Authority Outreach Domain Explorer"
+                ]
             })
             return
 
         elif parsed.path == "/api/security/manifest":
             self._send_json(get_security_manifest())
-            return
-
-        elif parsed.path == "/api/orders":
-            self._send_json({"orders": ORDERS_LEDGER, "total": len(ORDERS_LEDGER)})
             return
 
         # Default static file serving (HTML, JS, CSS, robots.txt, sitemap.xml)
@@ -415,7 +370,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
         except Exception:
             payload = {}
 
-        # 1. Backlink Generator Endpoint (from backlink-generator-tool)
+        # 1. Backlink Generator Tool (Free 4,640+ endpoints)
         if parsed.path == "/api/generate":
             target = payload.get("url", "https://example.com")
             cat = payload.get("category", "all")
@@ -439,7 +394,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             self._send_json({"target": norm, "urls": urls, "total": len(urls)})
             return
 
-        # 2. Live Concurrent Pinger (from h4cklinker & tegal1337)
+        # 2. Live Concurrent Pinger (Multi-threaded HTTP pings)
         elif parsed.path == "/api/ping":
             target = payload.get("url", "https://example.com")
             cat = payload.get("category", "all")
@@ -468,14 +423,14 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             self._send_json({"results": results, "total": len(results)})
             return
 
-        # 3. E-E-A-T Domain Vetting (from thelinkoster)
+        # 3. E-E-A-T Domain Vetting Tool
         elif parsed.path == "/api/vet":
             target = payload.get("target", "")
             res = audit_url(target)
             self._send_json(res.to_dict())
             return
 
-        # 4. Contextual Anchor Text Generator (from contextual-backlink-generator)
+        # 4. Contextual Anchor Text Diversity Matrix Tool
         elif parsed.path == "/api/anchors":
             brand = payload.get("brand", "ApexBrand")
             url = payload.get("url", "https://example.com")
@@ -485,35 +440,15 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
             self._send_json({"anchors": anchors})
             return
 
-        # 5. Google Disavow Generator (from Disavow-Generator)
+        # 5. Google Disavow Generator Tool
         elif parsed.path == "/api/disavow":
             items = payload.get("items", [])
-            content = generate_disavow_content(items, domain_mode=True)
+            domain_mode = payload.get("domain_mode", True)
+            content = generate_disavow_content(items, domain_mode=domain_mode)
             self._send_json({"content": content})
             return
 
-        # 6. Marketplace Cart Checkout
-        elif parsed.path == "/api/cart/checkout":
-            order_id = f"APX-{int(time.time())}-{len(ORDERS_LEDGER) + 101}"
-            raw_record = json.dumps(payload, sort_keys=True)
-            sig = compute_payload_hmac(raw_record)
-
-            order = {
-                "order_id": order_id,
-                "items": payload.get("items", []),
-                "total_usd": payload.get("total_usd", 0),
-                "target_url": payload.get("target_url", ""),
-                "anchor_text": payload.get("anchor_text", ""),
-                "content_option": payload.get("content_option", "publisher_writes"),
-                "status": "QUEUED_EDITORIAL_INTEGRITY_CHECK",
-                "hmac_signature": sig[:16] + "...",
-                "created_at": int(time.time())
-            }
-            ORDERS_LEDGER.append(order)
-            self._send_json({"success": True, "order": order})
-            return
-
-        # 7. Owner Verification
+        # 6. Owner Verification
         elif parsed.path == "/api/owner/verify":
             candidate = payload.get("owner_id", "")
             authorized = verify_owner_access(candidate)
@@ -532,7 +467,7 @@ class UnifiedApexHandler(SimpleHTTPRequestHandler):
 
 def start_server(host: str = "127.0.0.1", port: int = 8700):
     server = HTTPServer((host, port), UnifiedApexHandler)
-    print(f"[*] ApexLink All-In-One Studio Running at http://{host}:{port}")
+    print(f"[*] ApexLink 100% Free SEO Studio Running at http://{host}:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
