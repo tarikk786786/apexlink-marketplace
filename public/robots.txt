@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tarikk786786.github.io/apexlink-marketplace/sitemap.xml
