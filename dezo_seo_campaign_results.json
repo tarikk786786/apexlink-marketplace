@@ -1,0 +1,600 @@
+{
+  "target": "https://dezo.in",
+  "timestamp": "2026-10-19 23:21:17",
+  "audit": {
+    "target": "https://dezo.in",
+    "domain": "dezo.in",
+    "trust_score": 80,
+    "authority_score": 80,
+    "risk_level": "SAFE",
+    "is_safe": true,
+    "flags": [],
+    "has_authorship": true,
+    "has_contact_page": true,
+    "has_privacy_policy": true,
+    "has_about_page": true,
+    "is_https": true,
+    "has_schema_markup": true,
+    "is_pbn_footprint": false,
+    "has_toxic_outbounds": false,
+    "keyword_stuffing_score": 12,
+    "anchor_risk_score": 8
+  },
+  "anchors": [
+    {
+      "anchor": "DEZO Official",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO Tools",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "view source",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO best tools",
+      "tier": "PARTIAL_MATCH",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "digital infrastructure agency",
+      "tier": "EXACT_MATCH",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "reference",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO platform",
+      "tier": "PARTIAL_MATCH",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "click here",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO Tools",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "https://dezo.in",
+      "tier": "NAKED_URL",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo.in",
+      "tier": "NAKED_URL",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "guide on DEZO",
+      "tier": "PARTIAL_MATCH",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "https://dezo.in",
+      "tier": "NAKED_URL",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "www.dezo.in",
+      "tier": "NAKED_URL",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo.in",
+      "tier": "NAKED_URL",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "platform on DEZO",
+      "tier": "PARTIAL_MATCH",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "view source",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "check this out",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO Tools",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "dezo",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "DEZO Tools",
+      "tier": "BRANDED",
+      "target_url": "https://dezo.in"
+    },
+    {
+      "anchor": "source",
+      "tier": "GENERIC_CTA",
+      "target_url": "https://dezo.in"
+    }
+  ],
+  "generated_count": 50,
+  "detailed_links": [
+    {
+      "url": "https://www.google.com/ping?sitemap=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "domain_authority": 99,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer"
+    },
+    {
+      "url": "https://www.bing.com/ping?sitemap=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "domain_authority": 96,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer"
+    },
+    {
+      "url": "https://rpc.pingomatic.com/?title=dezo.in&blogurl=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "domain_authority": 65,
+      "quality_tier": "Tier 2 \u2014 Verified Directory & Diagnostic Node"
+    },
+    {
+      "url": "https://feedburner.google.com/fb/a/pingSubmit?blogUrl=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "domain_authority": 99,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer"
+    },
+    {
+      "url": "https://web.archive.org/save/https://dezo.in",
+      "category": "archive",
+      "domain_authority": 96,
+      "quality_tier": "Tier 1 \u2014 Official Wayback Web Archive"
+    },
+    {
+      "url": "https://archive.today/?run=1&url=https%3A%2F%2Fdezo.in",
+      "category": "archive",
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 High-Authority Snapshot Archive"
+    },
+    {
+      "url": "https://archive.is/?run=1&url=https%3A%2F%2Fdezo.in",
+      "category": "archive",
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 High-Authority Snapshot Archive"
+    },
+    {
+      "url": "https://archive.ph/?run=1&url=https%3A%2F%2Fdezo.in",
+      "category": "archive",
+      "domain_authority": 88,
+      "quality_tier": "Tier 1 \u2014 High-Authority Snapshot Archive"
+    },
+    {
+      "url": "https://validator.w3.org/nu/?doc=https%3A%2F%2Fdezo.in",
+      "category": "analytics",
+      "domain_authority": 98,
+      "quality_tier": "Tier 1 \u2014 Official Web Standards Validator"
+    },
+    {
+      "url": "https://validator.w3.org/mobile/check?docAddr=https%3A%2F%2Fdezo.in",
+      "category": "analytics",
+      "domain_authority": 98,
+      "quality_tier": "Tier 1 \u2014 Official Web Standards Validator"
+    },
+    {
+      "url": "https://transparencyreport.google.com/safe-browsing/search?url=https%3A%2F%2Fdezo.in",
+      "category": "analytics",
+      "domain_authority": 99,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer"
+    },
+    {
+      "url": "https://sitecheck.sucuri.net/results/dezo.in",
+      "category": "analytics",
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 Web Security & Malware Intel"
+    },
+    {
+      "url": "https://safeweb.norton.com/report/show?url=dezo.in",
+      "category": "analytics",
+      "domain_authority": 92,
+      "quality_tier": "Tier 1 \u2014 Symantec Web Safety Authority"
+    },
+    {
+      "url": "https://www.ssllabs.com/ssltest/analyze.html?d=dezo.in",
+      "category": "analytics",
+      "domain_authority": 91,
+      "quality_tier": "Tier 1 \u2014 Qualys SSL Security Authority"
+    },
+    {
+      "url": "https://builtwith.com/dezo.in",
+      "category": "analytics",
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 Technology Stack Authority"
+    },
+    {
+      "url": "https://www.similarweb.com/website/dezo.in",
+      "category": "analytics",
+      "domain_authority": 91,
+      "quality_tier": "Tier 1 \u2014 Global Traffic & Market Intelligence"
+    },
+    {
+      "url": "https://www.woorank.com/en/teaser-review/dezo.in",
+      "category": "analytics",
+      "domain_authority": 87,
+      "quality_tier": "Tier 1 \u2014 Professional Website Auditor"
+    },
+    {
+      "url": "https://sitechecker.pro/seo-report/dezo.in",
+      "category": "analytics",
+      "domain_authority": 79,
+      "quality_tier": "Tier 2 \u2014 Comprehensive On-Page Audit"
+    },
+    {
+      "url": "https://webseiten-analyse24.de/en/www/dezo.in",
+      "category": "analytics",
+      "domain_authority": 48,
+      "quality_tier": "Tier 3 \u2014 Standard Indexer Node"
+    },
+    {
+      "url": "https://website.ip-adress.com/dezo.in",
+      "category": "analytics",
+      "domain_authority": 48,
+      "quality_tier": "Tier 3 \u2014 Standard Indexer Node"
+    },
+    {
+      "url": "https://altovalleit.com/tools/robots-txt-tester/dezo.in",
+      "category": "directory",
+      "domain_authority": 48,
+      "quality_tier": "Tier 3 \u2014 Standard Indexer Node"
+    },
+    {
+      "url": "https://urlvoid.com/scan/dezo.in/",
+      "category": "analytics",
+      "domain_authority": 75,
+      "quality_tier": "Tier 2 \u2014 Web Reputation Scanner"
+    },
+    {
+      "url": "https://whois.domaintools.com/dezo.in",
+      "category": "whois",
+      "domain_authority": 88,
+      "quality_tier": "Tier 1 \u2014 ICANN WHOIS & Security Registry"
+    },
+    {
+      "url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3adezo.in",
+      "category": "whois",
+      "domain_authority": 86,
+      "quality_tier": "Tier 1 \u2014 Enterprise Mail & DNS Validator"
+    },
+    {
+      "url": "https://securitytrails.com/domain/dezo.in/dns",
+      "category": "whois",
+      "domain_authority": 82,
+      "quality_tier": "Tier 2 \u2014 DNS History & Reconnaissance"
+    }
+  ],
+  "verified_sample": [
+    {
+      "url": "https://scholar.google.com/scholar?q=site:dezo.in",
+      "domain": "google.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1910.4,
+      "domain_authority": 99,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://transparencyreport.google.com/safe-browsing/search?url=https%3A%2F%2Fdezo.in",
+      "domain": "google.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 2311.1,
+      "domain_authority": 99,
+      "quality_tier": "Tier 1 \u2014 High Authority Search Indexer",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://validator.w3.org/mobile/check?docAddr=https%3A%2F%2Fdezo.in",
+      "domain": "w3.org",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 966.8,
+      "domain_authority": 98,
+      "quality_tier": "Tier 1 \u2014 Official Web Standards Validator",
+      "notes": "Server Response (HTTP 403)"
+    },
+    {
+      "url": "https://validator.w3.org/nu/?doc=https%3A%2F%2Fdezo.in",
+      "domain": "w3.org",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 1189.3,
+      "domain_authority": 98,
+      "quality_tier": "Tier 1 \u2014 Official Web Standards Validator",
+      "notes": "Server Response (HTTP 403)"
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=site:dezo.in",
+      "domain": "duckduckgo.com",
+      "status_code": 202,
+      "is_valid": true,
+      "latency_ms": 562.3,
+      "domain_authority": 92,
+      "quality_tier": "Tier 1 \u2014 Privacy Search Indexer",
+      "notes": "Reachable (HTTP 202)"
+    },
+    {
+      "url": "https://safeweb.norton.com/report/show?url=dezo.in",
+      "domain": "norton.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1425.6,
+      "domain_authority": 92,
+      "quality_tier": "Tier 1 \u2014 Symantec Web Safety Authority",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://www.similarweb.com/website/dezo.in",
+      "domain": "similarweb.com",
+      "status_code": 202,
+      "is_valid": true,
+      "latency_ms": 537.0,
+      "domain_authority": 91,
+      "quality_tier": "Tier 1 \u2014 Global Traffic & Market Intelligence",
+      "notes": "Reachable (HTTP 202)"
+    },
+    {
+      "url": "https://www.ssllabs.com/ssltest/analyze.html?d=dezo.in",
+      "domain": "ssllabs.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1474.6,
+      "domain_authority": 91,
+      "quality_tier": "Tier 1 \u2014 Qualys SSL Security Authority",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://builtwith.com/dezo.in",
+      "domain": "builtwith.com",
+      "status_code": 202,
+      "is_valid": true,
+      "latency_ms": 1339.0,
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 Technology Stack Authority",
+      "notes": "Reachable (HTTP 202)"
+    },
+    {
+      "url": "https://sitecheck.sucuri.net/results/dezo.in",
+      "domain": "sucuri.net",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1527.2,
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 Web Security & Malware Intel",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://whois.domaintools.com/dezo.in",
+      "domain": "domaintools.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1023.6,
+      "domain_authority": 88,
+      "quality_tier": "Tier 1 \u2014 ICANN WHOIS & Security Registry",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3adezo.in",
+      "domain": "mxtoolbox.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1070.2,
+      "domain_authority": 86,
+      "quality_tier": "Tier 1 \u2014 Enterprise Mail & DNS Validator",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://securitytrails.com/domain/dezo.in/dns",
+      "domain": "securitytrails.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 789.8,
+      "domain_authority": 82,
+      "quality_tier": "Tier 2 \u2014 DNS History & Reconnaissance",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://www.robtex.com/dns-lookup/dezo.in",
+      "domain": "robtex.com",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 288.3,
+      "domain_authority": 78,
+      "quality_tier": "Tier 2 \u2014 Network Graph & IP Explorer",
+      "notes": "Server Response (HTTP 403)"
+    },
+    {
+      "url": "https://www.webwiki.com/dezo.in",
+      "domain": "webwiki.com",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 488.7,
+      "domain_authority": 76,
+      "quality_tier": "Tier 2 \u2014 Business & Web Directory",
+      "notes": "Server Response (HTTP 403)"
+    }
+  ],
+  "authority_seeds": [
+    {
+      "url": "https://validator.w3.org/nu/?doc=https://dezo.in",
+      "domain": "w3.org",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 407.8,
+      "domain_authority": 98,
+      "quality_tier": "Tier 1 \u2014 Official Web Standards Validator",
+      "notes": "Server Response (HTTP 403)"
+    },
+    {
+      "url": "https://www.similarweb.com/website/dezo.in/",
+      "domain": "similarweb.com",
+      "status_code": 202,
+      "is_valid": true,
+      "latency_ms": 382.1,
+      "domain_authority": 91,
+      "quality_tier": "Tier 1 \u2014 Global Traffic & Market Intelligence",
+      "notes": "Reachable (HTTP 202)"
+    },
+    {
+      "url": "https://builtwith.com/?dezo.in",
+      "domain": "builtwith.com",
+      "status_code": 202,
+      "is_valid": true,
+      "latency_ms": 1344.8,
+      "domain_authority": 89,
+      "quality_tier": "Tier 1 \u2014 Technology Stack Authority",
+      "notes": "Reachable (HTTP 202)"
+    },
+    {
+      "url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3adezo.in&run=toolpage",
+      "domain": "mxtoolbox.com",
+      "status_code": 200,
+      "is_valid": true,
+      "latency_ms": 1343.0,
+      "domain_authority": 86,
+      "quality_tier": "Tier 1 \u2014 Enterprise Mail & DNS Validator",
+      "notes": "Active & Reachable (HTTP 200 OK)"
+    },
+    {
+      "url": "https://viewdns.info/whois/?domain=dezo.in",
+      "domain": "viewdns.info",
+      "status_code": 403,
+      "is_valid": true,
+      "latency_ms": 431.6,
+      "domain_authority": 74,
+      "quality_tier": "Tier 2 \u2014 Verified DNS & Network Audit",
+      "notes": "Server Response (HTTP 403)"
+    },
+    {
+      "url": "https://www.google.com/search?q=site%3Adezo.in",
+      "domain": "google.com",
+      "status_code": 429,
+      "is_valid": false,
+      "latency_ms": 1111.6,
+      "domain_authority": 99,
+      "quality_tier": "Unreachable / Error",
+      "notes": "HTTP Error 429"
+    },
+    {
+      "url": "https://web.archive.org/web/*/https://dezo.in",
+      "domain": "archive.org",
+      "status_code": 429,
+      "is_valid": false,
+      "latency_ms": 1973.0,
+      "domain_authority": 96,
+      "quality_tier": "Unreachable / Error",
+      "notes": "HTTP Error 429"
+    }
+  ],
+  "ping_results": [
+    {
+      "url": "https://www.bing.com/ping?sitemap=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "status": "410",
+      "ok": false,
+      "latency_ms": 1250.75
+    },
+    {
+      "url": "https://www.google.com/ping?sitemap=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "status": "404",
+      "ok": false,
+      "latency_ms": 1420.89
+    },
+    {
+      "url": "https://validator.w3.org/mobile/check?docAddr=https%3A%2F%2Fdezo.in",
+      "category": "analytics",
+      "status": "403",
+      "ok": false,
+      "latency_ms": 1042.67
+    },
+    {
+      "url": "https://validator.w3.org/nu/?doc=https%3A%2F%2Fdezo.in",
+      "category": "analytics",
+      "status": "403",
+      "ok": false,
+      "latency_ms": 1145.79
+    },
+    {
+      "url": "https://rpc.pingomatic.com/?title=dezo.in&blogurl=https%3A%2F%2Fdezo.in",
+      "category": "search_ping",
+      "status": "200",
+      "ok": true,
+      "latency_ms": 1607.19
+    },
+    {
+      "url": "https://www.similarweb.com/website/dezo.in",
+      "category": "analytics",
+      "status": "202",
+      "ok": true,
+      "latency_ms": 361.78
+    },
+    {
+      "url": "https://archive.ph/?run=1&url=https%3A%2F%2Fdezo.in",
+      "category": "archive",
+      "status": "429",
+      "ok": false,
+      "latency_ms": 1601.14
+    },
+    {
+      "url": "https://archive.is/?run=1&url=https%3A%2F%2Fdezo.in",
+      "category": "archive",
+      "status": "429",
+      "ok": false,
+      "latency_ms": 1662.51
+    },
+    {
+      "url": "https://website.ip-adress.com/dezo.in",
+      "category": "analytics",
+      "status": "403",
+      "ok": false,
+      "latency_ms": 472.24
+    },
+    {
+      "url": "https://safeweb.norton.com/report/show?url=dezo.in",
+      "category": "analytics",
+      "status": "200",
+      "ok": true,
+      "latency_ms": 1308.5
+    }
+  ],
+  "disavow_content": "# Google Search Console Disavow File\n# Generated by OmniLink Studio on: 2026-10-19 23:21:17 UTC\n# Format: domain:example.com or url:https://example.com/path\n\n"
+}
